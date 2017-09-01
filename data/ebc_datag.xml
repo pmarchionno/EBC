@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <!--
+        Grupos
+        -->
+
+        <record id="grupoA" model="ebc.groups">
+			<field name="name">A</field>
+			<field name="denomination">Proveedores</field>
+			<!--<field eval="datetime.now().strftime('%Y')" name="fiscalyear_id"/> -->
+      <!--<field name="fiscalyear_id" ref="account.sales_journal"/> -->
+			<!--<field name="fiscalyear_id" eval="ref('account.sales_journal')"/> -->
+            <field name="note"></field>
+        </record>
+
+        <record id="grupoB" model="ebc.groups">
+			<field name="name">B</field>
+			<field name="denomination">Financiadores</field>
+      <!--      <field name="fiscalyear_id" eval="ref('account.sales_journal')"/> -->
+            <field name="note"></field>
+        </record>
+
+		<record id="grupoC" model="ebc.groups">
+			<field name="name">C</field>
+			<field name="denomination">Empleados Municipales</field>
+  <!--          <field name="fiscalyear_id" eval="ref('account.sales_journal')"/> -->
+            <field name="note"></field>
+        </record>
+
+		<record id="grupoD" model="ebc.groups">
+			<field name="name">D</field>
+			<field name="denomination">Ciudadaons/ Otros Municipios</field>
+  <!--          <field name="fiscalyear_id" eval="ref('account.sales_journal')"/> -->
+            <field name="note"></field>
+        </record>
+
+		<record id="grupoE" model="ebc.groups">
+			<field name="name">E</field>
+			<field name="denomination">Ambito Social. Fomento de Valores</field>
+<!--            <field name="fiscalyear_id" eval="ref('account.sales_journal')"/> -->
+            <field name="note"></field>
+        </record>
+
+    </data>
+</openerp>

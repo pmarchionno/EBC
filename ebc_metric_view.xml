@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="metric_tree" model="ir.ui.view">
+            <field name="name">metric.tree</field>
+            <field name="model">metric</field>
+            <field name="arch" type="xml">
+                <tree string="Metricas">
+                    <field name="name"/>
+                    <field name="valueInterpretation"/>
+                    <field name="objective"/>
+                    <field name="references"/>
+                    <field name="accuracy"/>
+                    <field name="author"/>
+                    <field name="version"/>
+                    <field name="attribute_id"/>
+                    <field name="scale_id"/>
+                    <field name="measurement"/>
+                    <field name="metric_ids"/>
+                </tree>
+            </field>
+        </record>
+
+    	<record id="metric_form" model="ir.ui.view">
+            <field name="name">metric.form</field>
+            <field name="model">metric</field>
+            <field name="arch" type="xml">
+                <form string="Metricas de la EBC" version="1.0">
+                    <group colspan="2">
+                        <field name="name"/>
+                        <field name="valueInterpretation"/>
+                        <field name="objective"/>
+                        <field name="references"/>
+                        <field name="accuracy"/>
+                	    <field name="author"/>
+                        <field name="version"/>
+                        <field name="attribute_id"/>
+                        <field name="scale_id"/>
+                        <field name="measurement"/>
+                        <field name="metric_ids"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="scale_tree" model="ir.ui.view">
+            <field name="name">scale.tree</field>
+            <field name="model">scale</field>
+            <field name="arch" type="xml">
+                <tree string="Indicadores de la EBC">
+				    <field name="name"/>
+                    <field name="scaleType"/>
+                    <field name="valueType"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="scale_form" model="ir.ui.view">
+            <field name="name">scale.form</field>
+            <field name="model">scale</field>
+            <field name="arch" type="xml">
+                <form string="Indicadores de la EBC" version="1.0">
+                    <group colspan="2">
+					    <field name="name"/>
+                        <field name="scaleType"/>
+                        <field name="valueType"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="method_tree" model="ir.ui.view">
+            <field name="name">method.tree</field>
+            <field name="model">method</field>
+            <field name="arch" type="xml">
+                <tree string="Indicadores de la EBC">
+                    <field name="name"/>
+                    <field name="especification"/>
+                    <field name="references"/>
+                    <field name="metric_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="method_form" model="ir.ui.view">
+            <field name="name">method.form</field>
+            <field name="model">method</field>
+            <field name="arch" type="xml">
+                <form string="Indicadores de la EBC" version="1.0">
+                    <group colspan="2">
+                        <field name="name"/>
+                        <field name="especification"/>
+                        <field name="references"/>
+                        <field name="metric_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="measurement_tree" model="ir.ui.view">
+            <field name="name">measurement.tree</field>
+            <field name="model">measurement</field>
+            <field name="arch" type="xml">
+                <tree string="Datos de la Epresa">
+                    <field name="timeStamp"/>
+                    <field name="dataCollectorName"/>
+                    <field name="collectorContactInfo"/>
+                    <field name="metric_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="measurement_form" model="ir.ui.view">
+            <field name="name">measurement</field>
+            <field name="model">measurement</field>
+            <field name="arch" type="xml">
+                <form string="Datos de la Empresa" version="1.0">
+                    <group colspan="2">
+                        <field name="timeStamp"/>
+                        <field name="dataCollectorName"/>
+                        <field name="collectorContactInfo"/>
+                        <field name="metric_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="metric_action" model="ir.actions.act_window">
+    		<field name="name">Metricas del Bien Comun</field>
+    		<field name="res_model">metric</field>
+    		<field name="view_type">form</field>
+    		<field name="view_mode">tree,form</field>
+    	</record>
+
+        <record id="scale_action" model="ir.actions.act_window">
+            <field name="name">Escalas del Bien Comun</field>
+            <field name="res_model">scale</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="method_action" model="ir.actions.act_window">
+            <field name="name">Metodos del Bien Comun</field>
+            <field name="res_model">method</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="measurement_action" model="ir.actions.act_window">
+            <field name="name">Mediciones del Bien Comun</field>
+            <field name="res_model">measurement</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--====
+		================MENU==================
+    	-->
+
+    	<menuitem id='metric_menu' name="Metrica EBC" />
+
+    	<menuitem id='submenu_metric' parent="metric_menu" name="Metricas de la EBC" sequence="0"/>
+    	<menuitem id='submenu_metric_action' parent="submenu_metric" name="Metricas" sequence="0" action="metric_action"/>
+
+        <menuitem id='submenu_metric' parent="metric_menu" name="Escalas para la EBC" sequence="0"/>
+        <menuitem id='submenu_scale_action' parent="submenu_metric" name="Escalas" sequence="0" action="scale_action"/>
+
+        <menuitem id='submenu_metric' parent="metric_menu" name="Metodos para la EBC" sequence="0"/>
+        <menuitem id='submenu_method_action' parent="submenu_metric" name="Metodos" sequence="0" action="method_action"/>
+
+        <menuitem id='submenu_metric' parent="metric_menu" name="Mediciones" sequence="0"/>
+        <menuitem id='submenu_measurement_action' parent="submenu_metric" name="Mediciones" sequence="0" action="measurement_action"/>
+<!--====
+-->
+    </data>
+</openerp>

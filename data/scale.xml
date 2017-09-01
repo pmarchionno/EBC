@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!--
+        Escalas
+        -->
+        
+		<record id="scaleDiscreta" model="scale">
+			<field name="name">Discreta (Ordinal)</field>
+			<field name="scaleType">ro</field>
+			<field name="valueType">i</field>
+        </record>
+		
+		<record id="scalePorcentual" model="scale">
+			<field name="name">Porcentual</field>
+			<field name="scaleType">r</field>
+			<field name="valueType">i</field>
+        </record>
+		
+		<record id="scaleNominal" model="scale">
+			<field name="name">Nominal</field>
+			<field name="scaleType">n</field>
+			<field name="valueType">i</field>
+        </record>
+		
+		<record id="scaleInterval" model="scale">
+			<field name="name">Interval</field>
+			<field name="scaleType">i</field>
+			<field name="valueType">i</field>
+        </record>
+
+    </data>
+</openerp>

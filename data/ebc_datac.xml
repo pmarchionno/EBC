@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!--
+        Criterios
+        -->
+        
+		<record id="criterioA11" model="ebc.criteria">
+			<field name="name">A1.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA1')"/>
+			<field name="denomination">Evalución de la aplicación de la sostenibilidad en sus proveedores</field>
+			<field name="ponderacion">33</field>
+			<field name="cumplimiento">10</field>
+        </record>
+
+		<record id="criterioA12" model="ebc.criteria">
+			<field name="name">A1.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA1')"/>
+			<field name="denomination">Modelo de contratación de personal utilizado por el proveedor</field>
+			<field name="ponderacion">33</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioA13" model="ebc.criteria">
+			<field name="name">A1.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA1')"/>
+			<field name="denomination">Características técnicas y ecológicas de los productos</field>
+			<field name="ponderacion">33</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioA21" model="ebc.criteria">
+			<field name="name">A2.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA2')"/>
+			<field name="denomination">Puntución en los contratos de compra la cercanía del proveedor</field>
+			<field name="ponderacion">0</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioA22" model="ebc.criteria">
+			<field name="name">A2.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA2')"/>
+			<field name="denomination">Sistema de rotación que se aplica a los proveedores de su territorio</field>
+			<field name="ponderacion">50</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioA23" model="ebc.criteria">
+			<field name="name">A2.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA2')"/>
+			<field name="denomination">Afinidad de los proveedores con la EBC</field>
+			<field name="ponderacion">50</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		
+		<record id="criterioA24" model="ebc.criteria">
+			<field name="name">A2.4</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA1')"/>
+			<field name="denomination">Periodo medio de pago a proveedores</field>
+			<field name="ponderacion">0</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		
+		<record id="criterioA31" model="ebc.criteria">
+			<field name="name">A3.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA3')"/>
+			<field name="denomination">Sostenibilidad de los proveedores</field>
+			<field name="ponderacion">33</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioA32" model="ebc.criteria">
+			<field name="name">A3.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA3')"/>
+			<field name="denomination">Modelo de contratación de personal del proveedor</field>
+			<field name="ponderacion">33</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		
+		<record id="criterioA33" model="ebc.criteria">
+			<field name="name">A3.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA3')"/>
+			<field name="denomination">Características técnica y ecológicas de los productos</field>
+			<field name="ponderacion">33</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		
+		<record id="criterioA41" model="ebc.criteria">
+			<field name="name">A4.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA4')"/>
+			<field name="denomination">Incidencia de la inversión social del proveedor en la decisión de su contratación</field>
+			<field name="ponderacion">50</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioA42" model="ebc.criteria">
+			<field name="name">A4.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA4')"/>
+			<field name="denomination">Marco estructural para un precio justo</field>
+			<field name="ponderacion">50</field>
+			<field name="cumplimiento">0</field>
+        </record>
+				
+		<record id="criterioA51" model="ebc.criteria">
+			<field name="name">A5.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA5')"/>
+			<field name="denomination">Publicación de todos los contratos de adquisiciones que realice el municipio</field>
+			<field name="ponderacion">50</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioA52" model="ebc.criteria">
+			<field name="name">A5.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorA5')"/>
+			<field name="denomination">Utilización estratégica de la contratación</field>
+			<field name="ponderacion">50</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		
+		<record id="criterioB11" model="ebc.criteria">
+			<field name="name">B1.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorB1')"/>
+			<field name="denomination">Análisis que se realiza del trato que la entidad bancaria realiza con los ciudadanos con problemas financieros (desahucios, recibos luz, etc</field>
+			<field name="ponderacion">90</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioB12" model="ebc.criteria">
+			<field name="name">B1.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorB1')"/>
+			<field name="denomination">Acuerdos de inversión social con la entidad bancaria con la que trabaja</field>
+			<field name="ponderacion">0</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioB13" model="ebc.criteria">
+			<field name="name">B1.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorB1')"/>
+			<field name="denomination">Participación como promotor en alguna propuesta de banca ética</field>
+			<field name="ponderacion">10</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioB21" model="ebc.criteria">
+			<field name="name">B2.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorB2')"/>
+			<field name="denomination">Fomento a las entidades financieras locales a acciones en beneficio de la comunidad</field>
+			<field name="ponderacion">90</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioB22" model="ebc.criteria">
+			<field name="name">B2.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorB2')"/>
+			<field name="denomination">Realización de la entidad financiera de préstamos solidarios a proyectos sociales e inversiones socialmente responsables</field>
+			<field name="ponderacion">0</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		
+		<record id="criterioB31" model="ebc.criteria">
+			<field name="name">B3.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorB3')"/>
+			<field name="denomination">Compromiso de la entidad bancaria con la gestión de sus residuos</field>
+			<field name="ponderacion">90</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioB32" model="ebc.criteria">
+			<field name="name">B3.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorB3')"/>
+			<field name="denomination">Acciones de la entidad finaciera propiciando los desarrollos ecológicamente sostenibles</field>
+			<field name="ponderacion">0</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		
+		<record id="criterioB41" model="ebc.criteria">
+			<field name="name">B4.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorB4')"/>
+			<field name="denomination">Préstamos solidarios de la entidad finaciera a proyectos sociales</field>
+			<field name="ponderacion">90</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		
+		<record id="criterioB51" model="ebc.criteria">
+			<field name="name">B5.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorB5')"/>
+			<field name="denomination">Análisis del trato que la entidad bancaria realiza con los ciudadanos con problemas financieros</field>
+			<field name="ponderacion">90</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioB52" model="ebc.criteria">
+			<field name="name">B5.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorB5')"/>
+			<field name="denomination">Análisis de la entidad bancaria de las inversiones y captaciones de pasivos que realiza de los fondos públicos que el municipio aporta</field>
+			<field name="ponderacion">0</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		
+		<record id="criterioC11" model="ebc.criteria">
+			<field name="name">C1.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC1')"/>
+			<field name="denomination">Horario de trabajo</field>
+			<field name="ponderacion">20</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		
+		<record id="criterioC12" model="ebc.criteria">
+			<field name="name">C1.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC1')"/>
+			<field name="denomination">Configuración del puesto de trabajo</field>
+			<field name="ponderacion">10</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC13" model="ebc.criteria">
+			<field name="name">C1.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC1')"/>
+			<field name="denomination">Salud física y seguridad</field>
+			<field name="ponderacion">10</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC14" model="ebc.criteria">
+			<field name="name">C1.4</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC1')"/>
+			<field name="denomination">Salud psíquica</field>
+			<field name="ponderacion">15</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC15" model="ebc.criteria">
+			<field name="name">C1.5</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC1')"/>
+			<field name="denomination">Formación de los empleados</field>
+			<field name="ponderacion">15</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC16" model="ebc.criteria">
+			<field name="name">C1.6</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC1')"/>
+			<field name="denomination">Igualdad y trato igualitario para hombre y mujer</field>
+			<field name="ponderacion">20</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC17" model="ebc.criteria">
+			<field name="name">C1.7</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC1')"/>
+			<field name="denomination">Organización y satisfacción con el puesto de trabajo</field>
+			<field name="ponderacion">10</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+        <record id="criterioC18" model="ebc.criteria">
+			<field name="name">C1.8</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC1')"/>
+			<field name="denomination">Desfavorecidos (p.ej. personas con discapacitaciones, emigrantes, desempleados de largo tiempo)</field>
+			<field name="ponderacion">10</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		<record id="criterioC21" model="ebc.criteria">
+			<field name="name">C2.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC2')"/>
+			<field name="denomination">Reducción de la jornada laboral normal</field>
+			<field name="ponderacion">75</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC22" model="ebc.criteria">
+			<field name="name">C2.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC2')"/>
+			<field name="denomination">Aumento del modelo laboral de jornada a tiempo parcial ( con plena paga)</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC31" model="ebc.criteria">
+			<field name="name">C3.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC3')"/>
+			<field name="denomination">Alimentación durante la jornada laboral</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC32" model="ebc.criteria">
+			<field name="name">C3.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC3')"/>
+			<field name="denomination">Movilidad al puesto de trabajo: sistema de incentivación / comportamiento real</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC33" model="ebc.criteria">
+			<field name="name">C3.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC3')"/>
+			<field name="denomination">Cultura de la organización y concienciación ecológica</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC34" model="ebc.criteria">
+			<field name="name">C3.4</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC3')"/>
+			<field name="denomination">Huella ecológica (de Carbono) de los trabajadores (EUP / PYME)</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC41" model="ebc.criteria">
+			<field name="name">C4.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC4')"/>
+			<field name="denomination">Diferencia de salarios internos en la empresa</field>
+			<field name="ponderacion">40</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC42" model="ebc.criteria">
+			<field name="name">C4.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC4')"/>
+			<field name="denomination">Salario mínimo</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC43" model="ebc.criteria">
+			<field name="name">C4.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC4')"/>
+			<field name="denomination">Salario máximo</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		
+		<record id="criterioC51" model="ebc.criteria">
+			<field name="name">C5.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC4')"/>
+			<field name="denomination">Procesos democráticos en la toma de decisiones y en la selección del personal</field>
+			<field name="ponderacion">40</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioC52" model="ebc.criteria">
+			<field name="name">C5.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorC4')"/>
+			<field name="denomination">Grado de transparencia</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioD11" model="ebc.criteria">
+			<field name="name">D1.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD1')"/>
+			<field name="denomination">Barreras arquitectónicas</field>
+			<field name="ponderacion">14</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioD12" model="ebc.criteria">
+			<field name="name">D1.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD1')"/>
+			<field name="denomination">Seguridad ciudadana</field>
+			<field name="ponderacion">14</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioD13" model="ebc.criteria">
+			<field name="name">D1.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD1')"/>
+			<field name="denomination">Elevación o mejora de calidad de vida</field>
+			<field name="ponderacion">14</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioD14" model="ebc.criteria">
+			<field name="name">D1.4</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD1')"/>
+			<field name="denomination">Atención a los más desfavorecidos</field>
+			<field name="ponderacion">14</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioD15" model="ebc.criteria">
+			<field name="name">D1.5</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD1')"/>
+			<field name="denomination">Incremento de caidad de vida de todos sus ciudadanos</field>
+			<field name="ponderacion">14</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioD21" model="ebc.criteria">
+			<field name="name">D2.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD2')"/>
+			<field name="denomination">Espacios dinámicos disponibles para encuentros</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioD22" model="ebc.criteria">
+			<field name="name">D2.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD2')"/>
+			<field name="denomination">Fomento de creación de mercados de proximidad</field>
+			<field name="ponderacion">50</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioD23" model="ebc.criteria">
+			<field name="name">D2.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD2')"/>
+			<field name="denomination">Sistema asociativo del municipio</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">0</field>
+		</record>
+		
+		<record id="criterioD24" model="ebc.criteria">
+			<field name="name">D2.4</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD2')"/>
+			<field name="denomination">Banco del tiempo</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioD25" model="ebc.criteria">
+			<field name="name">D2.5</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD2')"/>
+			<field name="denomination">Gestiona de exclusión</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioD31" model="ebc.criteria">
+			<field name="name">D3.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD3')"/>
+			<field name="denomination">Formación se realiza sobre el reciclado y el desarrollo ecológico</field>
+			<field name="ponderacion">55</field>
+			<field name="cumplimiento">50</field>
+        </record>
+
+		<record id="criterioD32" model="ebc.criteria">
+			<field name="name">D3.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD3')"/>
+			<field name="denomination">Servicios municipales prestados de forma ecológica</field>
+			<field name="ponderacion">30</field>
+			<field name="cumplimiento">27</field>
+        </record>
+
+		<record id="criterioD33" model="ebc.criteria">
+			<field name="name">D3.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD3')"/>
+			<field name="denomination">Ahorro energético y desarrollo de las energías renovables"</field>
+			<field name="ponderacion">5</field>
+			<field name="cumplimiento">14</field>
+        </record>
+		
+		<record id="criterioD34" model="ebc.criteria">
+			<field name="name">D3.4</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD3')"/>
+			<field name="denomination">Reservas de tierra</field>
+			<field name="ponderacion">30</field>
+			<field name="cumplimiento">27</field>
+        </record>
+
+		<record id="criterioD35" model="ebc.criteria">
+			<field name="name">D3.5</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD3')"/>
+			<field name="denomination">Defensa del Patrimonio, material e inmaterial"</field>
+			<field name="ponderacion">5</field>
+			<field name="cumplimiento">14</field>
+        </record>
+
+		<record id="criterioD41" model="ebc.criteria">
+			<field name="name">D4.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD4')"/>
+			<field name="denomination">Modelo de fiscalidad de equilibrio en las diferentes rentas de los ciudadanos</field>
+			<field name="ponderacion">30</field>
+			<field name="cumplimiento">9</field>
+        </record>
+
+		<record id="criterioD42" model="ebc.criteria">
+			<field name="name">D4.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD4')"/>
+			<field name="denomination">Búsqueda activa de empleo</field>
+			<field name="ponderacion">40</field>
+			<field name="cumplimiento">12</field>
+        </record>
+
+		<record id="criterioD43" model="ebc.criteria">
+			<field name="name">D4.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD4')"/>
+			<field name="denomination">Políticas activas de resolución de necesidades económicas de precariedad social</field>
+			<field name="ponderacion">30</field>
+			<field name="cumplimiento">9</field>
+        </record>
+		
+		<record id="criterioD44" model="ebc.criteria">
+			<field name="name">D4.4</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD4')"/>
+			<field name="denomination">Justicia social</field>
+			<field name="ponderacion">30</field>
+			<field name="cumplimiento">9</field>
+        </record>
+
+		<record id="criterioD51" model="ebc.criteria">
+			<field name="name">D5.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD5')"/>
+			<field name="denomination">Solicitud de préstamos</field>
+			<field name="ponderacion">35</field>
+			<field name="cumplimiento">11</field>
+        </record>
+
+		<record id="criterioD52" model="ebc.criteria">
+			<field name="name">D5.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD5')"/>
+			<field name="denomination">Políticas de presupuesto participativo y/o consultas ciudadanas</field>
+			<field name="ponderacion">15</field>
+			<field name="cumplimiento">5</field>
+        </record>
+
+		<record id="criterioD53" model="ebc.criteria">
+			<field name="name">D5.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD5')"/>
+			<field name="denomination">Participación ciudadana</field>
+			<field name="ponderacion">20</field>
+			<field name="cumplimiento">15</field>
+        </record>
+		
+		<record id="criterioD54" model="ebc.criteria">
+			<field name="name">D5.4</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD5')"/>
+			<field name="denomination">Transparencia y publicación de gastos</field>
+			<field name="ponderacion">20</field>
+			<field name="cumplimiento">15</field>
+        </record>
+		
+		<record id="criterioD55" model="ebc.criteria">
+			<field name="name">D5.5</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD5')"/>
+			<field name="denomination">Articulación de la participación ciudadana</field>
+			<field name="ponderacion">20</field>
+			<field name="cumplimiento">15</field>
+        </record>
+		
+		<record id="criterioD56" model="ebc.criteria">
+			<field name="name">D5.6</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorD5')"/>
+			<field name="denomination">Fomento de una cultura de la pluralidad</field>
+			<field name="ponderacion">20</field>
+			<field name="cumplimiento">15</field>
+        </record>
+
+		<record id="criterioE11" model="ebc.criteria">
+			<field name="name">E1.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE1')"/>
+			<field name="denomination">Aplicación y desarrollo de los Derechos Humanos</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">23</field>
+        </record>
+
+		<record id="criterioE12" model="ebc.criteria">
+			<field name="name">E1.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE1')"/>
+			<field name="denomination">Discriminación en la sociedad</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">23</field>
+        </record>
+
+		<record id="criterioE13" model="ebc.criteria">
+			<field name="name">E1.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE1')"/>
+			<field name="denomination">Proyectos sociales e innovadores a favor de la participación</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">23</field>
+        </record>
+
+		<record id="criterioE14" model="ebc.criteria">
+			<field name="name">E1.4</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE1')"/>
+			<field name="denomination">Urbanismo solidario</field>
+			<field name="ponderacion">25</field>
+			<field name="cumplimiento">23</field>
+        </record>
+
+		<record id="criterioE21" model="ebc.criteria">
+			<field name="name">E2.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE2')"/>
+			<field name="denomination">Mancomunar esfuerzos entre municipios cercanos para la dignidad humana</field>
+			<field name="ponderacion">70</field>
+			<field name="cumplimiento">28</field>
+        </record>
+
+		<record id="criterioE22" model="ebc.criteria">
+			<field name="name">E2.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE2')"/>
+			<field name="denomination">Convenios con sistemas asociativos</field>
+			<field name="ponderacion">30</field>
+			<field name="cumplimiento">12</field>
+        </record>
+
+		<record id="criterioE23" model="ebc.criteria">
+			<field name="name">E2.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE2')"/>
+			<field name="denomination">Convenios entre asociaciones especializadas y comunas</field>
+			<field name="ponderacion">0</field>
+			<field name="cumplimiento">0</field>
+        </record>
+		
+		<record id="criterioE24" model="ebc.criteria">
+			<field name="name">E2.4</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE2')"/>
+			<field name="denomination">Redes vecinales de solidaridad</field>
+			<field name="ponderacion">0</field>
+			<field name="cumplimiento">0</field>
+        </record>
+
+		<record id="criterioE31" model="ebc.criteria">
+			<field name="name">E3.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE3')"/>
+			<field name="denomination">Programa de apoyo sostenible de los espacios ecológicos</field>
+			<field name="ponderacion">33</field>
+			<field name="cumplimiento">23</field>
+        </record>
+
+		<record id="criterioE32" model="ebc.criteria">
+			<field name="name">E3.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE3')"/>
+			<field name="denomination">Ahorro energético del municipio</field>
+			<field name="ponderacion">33</field>
+			<field name="cumplimiento">23</field>
+        </record>
+
+		<record id="criterioE33" model="ebc.criteria">
+			<field name="name">E3.3</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE3')"/>
+			<field name="denomination">Forma sostenible las vías verdes</field>
+			<field name="ponderacion">33</field>
+			<field name="cumplimiento">23</field>
+        </record>
+
+		<record id="criterioE41" model="ebc.criteria">
+			<field name="name">E4.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE4')"/>
+			<field name="denomination">Plan de amortización de deuda</field>
+			<field name="ponderacion">100</field>
+			<field name="cumplimiento">60</field>
+        </record>
+		
+		<record id="criterioE42" model="ebc.criteria">
+			<field name="name">E4.2</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE4')"/>
+			<field name="denomination">Presupuesto sostenible</field>
+			<field name="ponderacion">100</field>
+			<field name="cumplimiento">60</field>
+        </record>
+
+		<record id="criterioE51" model="ebc.criteria">
+			<field name="name">E5.1</field>
+			<field name="ebc_indicators_id" eval="ref('indicadorE5')"/>
+			<field name="denomination">Encuesta del PIF de los ciudadanos de carácter bianual</field>
+			<field name="ponderacion">18</field>
+			<field name="cumplimiento">5</field>
+        </record>
+    </data>
+</openerp>

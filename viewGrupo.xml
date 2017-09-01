@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    	<record id="ebc_groups_tree" model="ir.ui.view">
+    		<field name="name">ebc.groups.tree</field>
+    		<field name="model">ebc.groups</field>
+    		<field name="arch" type="xml">
+                <tree string="Grupos de la EBC">
+                	<field name="name"/>
+                    <field name="denomination"/>
+                    <field name="cumplimiento"/>
+                    <field name="puntuacion"/>
+                    <field name="max_valoracion"/>
+                	<field name="note"/>
+                    <field name="fiscalyear_id"/>
+                </tree>
+    		</field>
+    	</record>
+    </data>
+</openerp>
+

@@ -1,0 +1,1157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <!--
+        Relaciones de Grado 2
+        -->
+
+        <record id="metricA11" model="metric">
+			<field name="name">A.1.1. Evalución de la aplicación de la sostenibilidad en sus proveedores</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Determinar el grado de aplicación de la sostenibilidad en sus proveedores</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA11'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+		<record id="metricA12" model="metric">
+			<field name="name">A.1.2. Modelo de contratación de personal utilizado por el proveedor</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Determinar el grado de aplicación de la contratación de personal utilizado por el proveedor</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA12'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+		<record id="metricA13" model="metric">
+			<field name="name">A.1.3. Características técnicas y ecológicas de los productos</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Determinar el grado de aplicación de las características técnicas y ecológicas de los productos</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA13'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricA21" model="metric">
+			<field name="name">A.2.1. Puntución en los contratos de compra la cercanía del proveedor</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Determinar el grado de aplicación de la puntución en los contratos de compra la cercanía del proveedor</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA21'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricA22" model="metric">
+			<field name="name">A.2.2. Sistema de rotación que se aplica a los proveedores de su territorio</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Determinar el grado de aplicación del sistema de rotación de proveedores en el territorio</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA12'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricA23" model="metric">
+			<field name="name">A.2.3. Afinidad de los proveedores con la EBC</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Determinar el grado de afinidad de los proveedores con la EBC</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA23'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricA24" model="metric">
+			<field name="name">A.2.4. Periodo medio de pago a proveedores</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Determinar el grado el periodo medio de pago a proveedores</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA24'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricA31" model="metric">
+			<field name="name">A.3.1. Sostenibilidad de los proveedores</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Determinar el grado de sostenibilidad de los proveedores</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA31'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricA32" model="metric">
+			<field name="name">A.3.2. Modelo de contratación de personal del proveedor</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Ponderar los de contratación de personal del proveedor</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA32'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricA33" model="metric">
+			<field name="name">A.3.3. Características técnica y ecológicas de los productos</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Determinar las características técnica y ecológicas de los productos</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA33'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricA41" model="metric">
+			<field name="name">A.4.1. Incidencia de la inversión social del proveedor en la decisión de su contratación</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Determinar el grado de incidencia de la inversión social del proveedor en la decisión de su contratación</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA41'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricA42" model="metric">
+			<field name="name">A.4.2. Marco estructural para un precio justo</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Determinar el grado de incidencia del marco estructural para un precio justo</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA42'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricA51" model="metric">
+			<field name="name">A.5.1. Publicación de todos los contratos de adquisiciones que realice el municipio</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Ponderar las publicaciones de todos los contratos de adquisiciones que realice el municipio</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA51'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricA52" model="metric">
+			<field name="name">A.5.2. Utilización estratégica de la contratación</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar la utilización estratégica en las contrataciones</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioA52'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricB11" model="metric">
+			<field name="name">B.1.1. Análisis que se realiza del trato que la entidad bancaria realiza con los ciudadanos con problemas financieros (desahucios, recibos luz, etc</field>
+			<field name="valueInterpretation"></field>
+	        <field name="objective">Evaluar el análisis que se realiza del trato que la entidad bancaria realiza con los ciudadanos con problemas financieros</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioB11'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricB12" model="metric">
+			<field name="name">B.1.2. Acuerdos de inversión social con la entidad bancaria con la que trabaja</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de los acuerdos de inversión social con la entidad bancaria con la que trabaja</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioB12'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricB13" model="metric">
+			<field name="name">B.1.3. Participación como promotor en alguna propuesta de banca ética</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar las participaciones como promotor en alguna propuesta de banca ética</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioB13'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricB21" model="metric">
+			<field name="name">B.2.1. Fomento a las entidades financieras locales a acciones en beneficio de la comunidad</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar el fomento a las entidades financieras locales a acciones en beneficio de la comunidad</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioB21'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricB22" model="metric">
+			<field name="name">B.2.2. Realización de la entidad financiera de préstamos solidarios a proyectos sociales e inversiones socialmente responsables</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar el grado de participación de las entidades financieras de préstamos solidarios a proyectos sociales e inversiones socialmente responsables</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioB22'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricB31" model="metric">
+			<field name="name">B.3.1. Compromiso de la entidad bancaria con la gestión de sus residuos</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar el compromiso de la entidad bancaria con la gestión de sus residuos</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioB31'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricB32" model="metric">
+			<field name="name">B.3.2. Acciones de la entidad finaciera propiciando los desarrollos ecológicamente sostenibles</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar las acciones de las entidades finacieras propiciando los desarrollos ecológicamente sostenibles</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioB32'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricB41" model="metric">
+			<field name="name">B.4.1. Préstamos solidarios de la entidad finaciera a proyectos sociales</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar los Ppéstamos solidarios de las entidades finacieras a proyectos sociales</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioB41'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricB51" model="metric">
+			<field name="name">B.5.1. Análisis del trato que la entidad bancaria realiza con los ciudadanos con problemas financieros</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar los tratos que las entidades bancarias realizan con los ciudadanos con problemas financieros</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioB51'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricB52" model="metric">
+			<field name="name">B.5.2. Análisis de la entidad bancaria de las inversiones y captaciones de pasivos que realiza de los fondos públicos que el municipio aporta</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar las entidades bancarias en las inversiones y captaciones de pasivos que realiza de los fondos públicos que el municipio aporta</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioB52'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC11" model="metric">
+			<field name="name">C.1.1. Horario de trabajo</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la flexibilidad de los horarios de trabajo</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC11'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC12" model="metric">
+			<field name="name">C.1.2. Configuración del puesto de trabajo</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la configuración de los puestos de trabajo</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC12'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC13" model="metric">
+			<field name="name">C.1.3. Salud física y seguridad</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la salud física y seguridad de los empleados</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC13'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC14" model="metric">
+			<field name="name">C.1.4. Salud psíquica</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la salud psíquica de los empleados</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC14'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC15" model="metric">
+			<field name="name">C.1.5. Formación de los empleados</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la formación de los empleados</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC15'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC16" model="metric">
+			<field name="name">C.1.6. Igualdad y trato igualitario para hombre y mujer</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la igualdad y trato igualitario para hombres y mujeres</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC16'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC17" model="metric">
+			<field name="name">C.1.7. Organización y satisfacción con el puesto de trabajo</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la organización y satisfacción con el puesto de trabajo</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC17'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC18" model="metric">
+			<field name="name">C.1.8. Desfavorecidos</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del trato hacia los desfavorecidos (p.ej. personas con discapacitaciones, emigrantes, desempleados de largo tiempo)</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioC18'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC21" model="metric">
+			<field name="name">C.2.1. Reducción de la jornada laboral normal</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la reducción de la jornada laboral normal</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC21'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC22" model="metric">
+			<field name="name">C.2.2. Aumento del modelo laboral de jornada a tiempo parcial</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del aumento del modelo laboral de jornada a tiempo parcial ( con plena paga)</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC12'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC31" model="metric">
+			<field name="name">C.3.1. Alimentación durante la jornada laboral</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la alimentación durante la jornada laboral</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC31'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC32" model="metric">
+			<field name="name">C.3.2. Movilidad al puesto de trabajo: sistema de incentivación / comportamiento real</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar los tipos de movilidad al puesto de trabajo, sistema de incentivación y/o comportamiento real</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC32'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC33" model="metric">
+			<field name="name">C.3.3. Cultura de la organización y concienciación ecológica</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la cultura de la organización y concienciación ecológica</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC33'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC34" model="metric">
+			<field name="name">C.3.4. Huella ecológica</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la huella ecológica (de Carbono) de los trabajadores (EUP / PYME)</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC34'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC41" model="metric">
+			<field name="name">C.4.1. Diferencia de salarios internos en la empresa</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de las diferencias de salarios internos en la empresa</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC41'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC42" model="metric">
+			<field name="name">C.4.2. Salario mínimo</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar el porcentaje de los salarios de los empleados que se encuentran por debajo del salario mínimo correspondiente</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC42'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC43" model="metric">
+			<field name="name">C.4.3. Salario máximo</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar el porcentaje de los salarios de los empleados que superan el salario máximo correspondiente</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC43'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC51" model="metric">
+			<field name="name">C.5.1. Procesos democráticos en la toma de decisiones y en la selección del personal</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de los procesos democráticos en la toma de decisiones y en la selección del personal</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC51'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricC52" model="metric">
+			<field name="name">C.5.2. Grado de transparencia</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del grado de transparencia del municipio</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioC52'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD11" model="metric">
+			<field name="name">D.1.1. Barreras arquitectónicas</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de barreras arquitectónicas</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD11'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD12" model="metric">
+			<field name="name">D.1.2. Seguridad ciudadana</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación en la seguridad ciudadana</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD12'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD13" model="metric">
+			<field name="name">D.1.3. Elevación o mejora de calidad de vida</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del grado de elevación o mejora de calidad de vida</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD13'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD14" model="metric">
+			<field name="name">D.1.4. Atención a los más desfavorecidos</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación en la atención a los más desfavorecidos</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD14'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD15" model="metric">
+			<field name="name">D.1.5. Incremento de caidad de vida de todos los ciudadanos</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del incremento de caidad de vida de todos los ciudadanos</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD15'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD21" model="metric">
+			<field name="name">D.2.1. Espacios dinámicos disponibles para encuentros</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de los espacios dinámicos disponibles para encuentros</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD21'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD22" model="metric">
+			<field name="name">D.2.2. Fomento de creación de mercados de proximidad</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del fomento de creación de mercados de proximidad</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD22'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD23" model="metric">
+			<field name="name">D.2.3. Sistema asociativo del municipio</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del sistema asociativo del municipio</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD23'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD24" model="metric">
+			<field name="name">D.2.4. Banco del tiempo</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de Banco del tiempo</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD24'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD25" model="metric">
+			<field name="name">D.2.5. Gestiona de exclusión</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar la gestión de exclusiones</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD25'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD31" model="metric">
+			<field name="name">D.3.1. Formación se realiza sobre el reciclado y el desarrollo ecológico</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la formación que se realiza sobre el reciclado y el desarrollo ecológico</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD31'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD32" model="metric">
+			<field name="name">D.3.2. Servicios municipales prestados de forma ecológica</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de los servicios municipales prestados de forma ecológica</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD32'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD33" model="metric">
+			<field name="name">D.3.3. Ahorro energético y desarrollo de las energías renovables</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del ahorro energético y desarrollo de las energías renovables</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD33'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD34" model="metric">
+			<field name="name">D.3.4. Reservas de tierra</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de las reservas de tierra</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD34'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD35" model="metric">
+			<field name="name">D.3.5. Defensa del Patrimonio, material e inmaterial</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la defensa del Patrimonio, material e inmaterial</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD35'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD41" model="metric">
+			<field name="name">D.4.1. Modelo de fiscalidad de equilibrio en las diferentes rentas de los ciudadanos</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de los modelos de fiscalidad de equilibrio en las diferentes rentas de los ciudadanos</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD41'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD42" model="metric">
+			<field name="name">D.4.2. Búsqueda activa de empleo</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Determinar en la búsqueda activa de empleo</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD42'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD43" model="metric">
+			<field name="name">D.4.3. Políticas activas de resolución de necesidades económicas de precariedad social</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de las políticas activas de resolución de necesidades económicas de precariedad social</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD43'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD44" model="metric">
+			<field name="name">D.4.4. Justicia social</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la aplicación de la justicia social</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD44'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD51" model="metric">
+			<field name="name">D.5.1. Solicitud de préstamos</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del comportamiento del municipio en las solicitudes de préstamos</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD51'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD52" model="metric">
+			<field name="name">D.5.2. Políticas de presupuesto participativo y/o consultas ciudadanas</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de las políticas de presupuesto participativo y/o consultas ciudadanas</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD52'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD53" model="metric">
+			<field name="name">D.5.3. Participación ciudadana</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la participación ciudadana en la toma de decisiones</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD53'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD54" model="metric">
+			<field name="name">D.5.4. Transparencia y publicación de gastos</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del compromiso en la transparencia y publicación de gastos</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD54'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD55" model="metric">
+			<field name="name">D.5.5. Articulación de la participación ciudadana</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la articulación de la participación ciudadana</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD55'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricD56" model="metric">
+			<field name="name">D.5.6. Fomento de una cultura de la pluralidad</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del fomento de una cultura de la pluralidad</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioD56'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE11" model="metric">
+			<field name="name">E.1.1. Aplicación y desarrollo de los Derechos Humanos</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la aplicación y desarrollo de los Derechos Humanos</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioE11'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE12" model="metric">
+			<field name="name">E.1.2. Discriminación en la sociedad</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Discriminación en la sociedad</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'20'+str(ref('criterioE12'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE13" model="metric">
+			<field name="name">E.1.3. Proyectos sociales e innovadores a favor de la participación</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de los proyectos sociales e innovadores a favor de la participación</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioE13'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE14" model="metric">
+			<field name="name">E.1.4. Urbanismo solidario</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar el comportamiento de urbanismo solidario</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioE14'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE21" model="metric">
+			<field name="name">E.2.1. Mancomunar esfuerzos entre municipios cercanos para la dignidad humana</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluar la Mancomunación de esfuerzos entre municipios cercanos para la dignidad humana</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioE21'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE22" model="metric">
+			<field name="name">E.2.2. Convenios con sistemas asociativos</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de los convenios con sistemas asociativos</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioE22'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE23" model="metric">
+			<field name="name">E.2.3. Convenios entre asociaciones especializadas y comunas</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de los convenios entre asociaciones especializadas y comunas</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioE23'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE24" model="metric">
+			<field name="name">E.2.4. Redes vecinales de solidaridad</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de las redes vecinales de solidaridad</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioE24'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE31" model="metric">
+			<field name="name">E.3.1. Programa de apoyo sostenible de los espacios ecológicos</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de los programas de apoyo sostenibles de los espacios ecológicos</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioE31'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE32" model="metric">
+			<field name="name">E.3.2. Ahorro energético del municipio</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del ahorro energético del municipio</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioE32'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE33" model="metric">
+			<field name="name">E.3.3. Forma sostenible las vías verdes</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de las formas sostenibles de las vías verdes</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioE33'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE41" model="metric">
+			<field name="name">E.4.1. Plan de amortización de deuda</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de los planes de amortización de deudas</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioE41'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE42" model="metric">
+			<field name="name">E.4.2. Presupuesto sostenible</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de los presupuestos sostenibles</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioE42'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+		
+        <record id="metricE51" model="metric">
+			<field name="name">E.5.1. Encuesta del PIF de los ciudadanos de carácter bianual</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de la encuesta del PIF de los ciudadanos de carácter bianual</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="'2'+str(ref('criterioE51'))"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids"></field>
+        </record>
+
+    </data>
+</openerp>

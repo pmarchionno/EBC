@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    	<record id="ebc_groups_tree" model="ir.ui.view">
+    		<field name="name">ebc.groups.tree</field>
+    		<field name="model">ebc.groups</field>
+    		<field name="arch" type="xml">
+                <tree string="Grupos de la EBC">
+                	<field name="name"/>
+                    <field name="denomination"/>
+                    <field name="cumplimiento"/>
+                    <field name="puntuacion"/>
+                    <field name="max_valoracion"/>
+                	<field name="note"/>
+                    <field name="fiscalyear_id"/>
+                </tree>
+    		</field>
+    	</record>
+
+    	<record id="ebc_groups_form" model="ir.ui.view">
+            <field name="name">ebc.groups.form</field>
+            <field name="model">ebc.groups</field>
+            <field name="arch" type="xml">
+                <form string="Grupos de la EBC" version="1.0">
+                    <group colspan="2">
+                        <field name="name"/>
+                        <field name="denomination"/>
+                        <field name="cumplimiento"/>
+                        <field name="puntuacion"/>
+                        <field name="max_valoracion"/>
+                        <field name="note"/>
+                        <field name="fiscalyear_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="ebc_indicators_tree" model="ir.ui.view">
+            <field name="name">ebc.indicators.tree</field>
+            <field name="model">ebc.indicators</field>
+            <field name="arch" type="xml">
+                <tree string="Indicadores de la EBC">
+                    <field name="name"/>
+                    <field name="denomination"/>
+                    <field name="ponderacion"/>
+                    <field name="cumplimiento"/>
+                    <field name="puntuacion"/>
+                    <field name="max_valoracion"/>
+                    <field name="valoracion_base"/>
+                    <field name="ebc_groups_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ebc_indicators_form" model="ir.ui.view">
+            <field name="name">ebc.indicators.form</field>
+            <field name="model">ebc.indicators</field>
+            <field name="arch" type="xml">
+                <form string="Indicadores de la EBC" version="1.0">
+                    <group colspan="2">
+                        <field name="name"/>
+                        <field name="denomination"/>
+                        <field name="ponderacion"/>
+                        <field name="cumplimiento"/>
+                        <field name="puntuacion"/>
+                        <field name="max_valoracion"/>
+                        <field name="valoracion_base"/>
+                        <field name="ebc_groups_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="ebc_criteria_tree" model="ir.ui.view">
+            <field name="name">ebc.criteria.tree</field>
+            <field name="model">ebc.criteria</field>
+            <field name="arch" type="xml">
+                <tree string="Indicadores de la EBC">
+                    <field name="name"/>
+                    <field name="denomination"/>
+                    <field name="ponderacion"/>
+                    <field name="cumplimiento"/>
+                    <field name="puntuacion"/>
+                    <field name="max_valoracion"/>
+                    <field name="ebc_indicators_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ebc_criteria_form" model="ir.ui.view">
+            <field name="name">ebc.criteria.form</field>
+            <field name="model">ebc.criteria</field>
+            <field name="arch" type="xml">
+                <form string="Indicadores de la EBC" version="1.0">
+                    <group colspan="2">
+                        <field name="name"/>
+                        <field name="denomination"/>
+                        <field name="ponderacion"/>
+                        <field name="cumplimiento"/>
+                        <field name="puntuacion"/>
+                        <field name="max_valoracion"/>
+                        <field name="ebc_indicators_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ebc_empresa_tree" model="ir.ui.view">
+            <field name="name">ebc.empresa.tree</field>
+            <field name="model">ebc.empresa</field>
+            <field name="arch" type="xml">
+                <tree string="Datos de la Epresa">
+                    <field name="razon_social"/>
+                    <field name="direccion"/>
+                    <field name="pais_id"/>
+                    <field name="productos_de_minoristas"/>
+                    <field name="numero_trabajadores"/>
+                    <field name="tipo_empresa"/>
+                    <field name="responsable"/>
+                    <field name="email"/>
+                    <field name="telefono"/>
+                    <field name="web"/>
+                    <field name="auditor"/>
+                    <field name="reclamaciones"/>
+                    <field name="informacion"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ebc_empresa_form" model="ir.ui.view">
+            <field name="name">ebc.empresa.form</field>
+            <field name="model">ebc.empresa</field>
+            <field name="arch" type="xml">
+                <form string="Datos de la Empresa" version="1.0">
+                    <group colspan="2">
+                        <field name="razon_social"/>
+                        <field name="direccion"/>
+                        <field name="pais_id"/>
+                        <field name="productos_de_minoristas"/>
+                        <field name="numero_trabajadores"/>
+                        <field name="tipo_empresa"/>
+                        <field name="responsable"/>
+                        <field name="email"/>
+                        <field name="telefono"/>
+                        <field name="web"/>
+                        <field name="auditor"/>
+                        <field name="reclamaciones"/>
+                        <field name="informacion"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+<!--=======================
+        <record id="ebc_parametros_tree" model="ir.ui.view">
+            <field name="name">ebc.parametros.tree</field>
+            <field name="model">ebc.parametros</field>
+            <field name="arch" type="xml">
+                <tree string="Parametros EBC">
+                    <field name="movilidad"/>
+                    <field name="cultura"/>
+                    <field name="huellaEcologica"/>
+                    <field name="institucionalizacion"/>
+                    <field name="markEtico"/>
+                    <field name="formacion"/>
+                    <field name="bonificaciones"/>
+                    <field name="alcance"/>
+                    <field name="transparencia"/>
+                    <field name="cooperacion"/>
+                    <field name="reclamaciones"/>
+                    <field name="revelacion"/>
+                    <field name="prestamo"/>
+                    <field name="markCoop"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ebc_parametros_form" model="ir.ui.view">
+            <field name="name">ebc.parametros.form</field>
+            <field name="model">ebc.parametros</field>
+            <field name="arch" type="xml">
+                <form string="Parametros de la EBC" version="1.0">
+                    <group colspan="2">
+                        <field name="movilidad"/>
+                        <field name="cultura"/>
+                        <field name="huellaEcologica"/>
+                        <field name="institucionalizacion"/>
+                        <field name="markEtico"/>
+                        <field name="formacion"/>
+                        <field name="bonificaciones"/>
+                        <field name="alcance"/>
+                        <field name="transparencia"/>
+                        <field name="cooperacion"/>
+                        <field name="reclamaciones"/>
+                        <field name="revelacion"/>
+                        <field name="prestamo"/>
+                        <field name="markCoop"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+====-->
+
+    	<record id="ebc_groups_action" model="ir.actions.act_window">
+    		<field name="name">Economia del Bien Comun - Grupos</field>
+    		<field name="res_model">ebc.groups</field>
+    		<field name="view_type">form</field>
+    		<field name="view_mode">tree,form</field>
+    	</record>
+
+        <record id="ebc_indicators_action" model="ir.actions.act_window">
+            <field name="name">Economia del Bien Comun - Indicadores</field>
+            <field name="res_model">ebc.indicators</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="ebc_criteria_action" model="ir.actions.act_window">
+            <field name="name">Economia del Bien Comun - Criteria</field>
+            <field name="res_model">ebc.criteria</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="ebc_empresa_action" model="ir.actions.act_window">
+            <field name="name">Economia del Bien Comun - Datos de la Empresa</field>
+            <field name="res_model">ebc.empresa</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!--====
+        <record id="ebc_parametros_action" model="ir.actions.act_window">
+            <field name="name">Economia del Bien Comun - Parametros</field>
+            <field name="res_model">ebc.parametros</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+-->
+
+
+    	<!--====
+		================MENU==================
+    	-->
+
+    	<menuitem id='ebc_matriz_menu' name="EBC" />
+
+    	<menuitem id='submenu_ebc_matriz' parent="ebc_matriz_menu" name="Matriz del Bien Común" sequence="0"/>
+    	<menuitem id='submenu_ebc_groups_action' parent="submenu_ebc_matriz" name="Grupos" sequence="0" action="ebc_groups_action"/>
+
+        <menuitem id='submenu_ebc_matriz' parent="ebc_matriz_menu" name="Matriz del Bien Común" sequence="0"/>
+        <menuitem id='submenu_ebc_indicators_action' parent="submenu_ebc_matriz" name="Indicators" sequence="0" action="ebc_indicators_action"/>
+
+        <menuitem id='submenu_ebc_matriz' parent="ebc_matriz_menu" name="Matriz del Bien Común" sequence="0"/>
+        <menuitem id='submenu_ebc_criteria_action' parent="submenu_ebc_matriz" name="Criteria" sequence="0" action="ebc_criteria_action"/>
+
+
+        <menuitem id='submenu_ebc_parametros' parent="ebc_matriz_menu" name="Parametros" sequence="0"/>
+        <menuitem id='submenu_ebc_empresa_action' parent="submenu_ebc_parametros" name="Datos de la Empresa" sequence="0" action="ebc_empresa_action"/>
+<!--====
+        <menuitem id='submenu_ebc_parametros' parent="ebc_matriz_menu" name="Parametros" sequence="0"/>
+        <menuitem id='submenu_ebc_parametros_action' parent="submenu_ebc_parametros" name="Parametros" sequence="10" action="ebc_parametros_action"/>
+-->
+		<menuitem id='submenu_ebc_parametros' parent="ebc_matriz_menu" name="Parametros" sequence="0"/>
+        <menuitem id='submenu_ebc_matriz_action' parent="submenu_ebc_parametros" name="Matriz del Bien Común" sequence="10" action="ebc_empresa_action"/>
+
+		<menuitem id='submenu_ebc_informes' parent="ebc_matriz_menu" name="Informes" sequence="0"/>
+        <menuitem id='submenu_ebc_bbc' parent="submenu_ebc_informes" name="Balance del Bien Común" sequence="10" action="ebc_empresa_action"/>
+
+
+        <!--======================= HERENCIA =======================-->
+        <record id="inherit_respartner_cumpl_ebc" model="ir.ui.view">
+            <field name="name">res.partner.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="customer" position="after">
+                    <field name="cumpl_ebc" />
+                </field>
+            </field>
+        </record>
+        <!--====-->
+
+
+
+
+
+
+
+
+
+
+        <!--====INFORMES
+        <menuitem id='submenu_ebc_matriz' parent="ebc_matriz_menu" name="Informes" sequence="0"/>
+        <menuitem id='submenu_ebc_reporte' parent="submenu_ebc_matriz" name="Matriz del Bien Comun" sequence="0" action="report_ebc_action"/>
+
+
+
+        <record id="view_report_ebc_form" model="ir.ui.view">
+            <field name="name">view.report.ebc.form</field>
+            <field name="model">ebc.report</field>
+            <field name="arch" type="xml">
+                <form string="Matriz del Bien Comun " version="1.0">
+                    <group col="4">
+                        <field name="denomination_group"/>
+                        <field name="denomination_indicator"/>
+                        <field name="denomination_criteria"/>
+                        <field name="value_criteria"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_report_ebc_tree" model="ir.ui.view">
+            <field name="name">Sales by user</field>
+            <field name="model">ebc.report</field>
+            <field name="arch" type="xml">
+                <tree string="POS">
+                    <field name="denomination_group"/>
+                    <field name="denomination_indicator"/>
+                    <field name="denomination_criteria"/>
+                    <field name="value_criteria"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="report_ebc_action" model="ir.actions.act_window">
+            <field name="name">Sales by day</field>
+            <field name="res_model">ebc.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+====-->
+    </data>
+</openerp>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <!--
+        Relaciones de Grado 0
+        -->
+
+        <record id="metricA" model="metric">
+			<field name="name">A. Proveedores</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de Proveedores</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="ref('grupoA')"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids" eval="[(6, 0, [ ref('metricA1'), ref('metricA2'), ref('metricA3'), ref('metricA4'), ref('metricA5') ])]"/>
+        </record>
+		
+		
+		<record id="metricB" model="metric">
+			<field name="name">B. Financiadores</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de Financiadores</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="ref('grupoB')"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids" eval="[(6, 0, [ ref('metricB1'), ref('metricB2'), ref('metricB3'), ref('metricB4'), ref('metricB5') ])]"/>
+        </record>
+		
+		
+		<record id="metricC" model="metric">
+			<field name="name">C. Empleados Municipales</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de los Empleados Municipales</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="ref('grupoC')"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids" eval="[(6, 0, [ ref('metricC1'), ref('metricC2'), ref('metricC3'), ref('metricC4'), ref('metricC5') ])]"/>
+        </record>
+		
+		<record id="metricD" model="metric">
+			<field name="name">D. Ciudadaons/Otros Municipios</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación de Ciudadaons/Otros Municipios</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="ref('grupoB')"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids" eval="[(6, 0, [ ref('metricD1'), ref('metricD2'), ref('metricD3'), ref('metricD4'), ref('metricD5') ])]"/>
+        </record>
+		
+		<record id="metricE" model="metric">
+			<field name="name">E. Ambito Social. Fomento de Valores</field>
+			<field name="valueInterpretation"></field>
+			<field name="objective">Evaluación del Ambito Social y Fomento de Valores</field>
+			<field name="references"></field>
+            <field name="accuracy"></field>
+            <field name="author">Pablo Marchionno</field>
+			<field name="version">1</field>
+			<field name="attribute_id" eval="ref('grupoE')"/>
+            <field name="scale_id" eval="ref('scaleDiscreta')" />
+			<field name="measurement"></field>
+			<field name="metric_ids" eval="[(6, 0, [ ref('metricB1'), ref('metricB2'), ref('metricB3'), ref('metricB4'), ref('metricB5') ])]"/>
+        </record>
+		
+    </data>
+</openerp>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="0">
+        <!--
+        Indicadores
+        -->
+
+		<record id="indicadorA1" model="ebc.indicators">
+			<field name="name">A1</field>
+			<field name="ebc_groups_id" eval="ref('grupoA')"/>
+			<field name="denomination">Gestión ética del los suministros</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">90</field>
+        </record>
+
+		<record id="indicadorA2" model="ebc.indicators">
+			<field name="name">A2</field>
+			<field name="ebc_groups_id" eval="ref('grupoA')"/>
+			<field name="denomination">Gestión solidaria del los suministros</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">90</field>
+        </record>
+
+		<record id="indicadorA3" model="ebc.indicators">
+			<field name="name">A3</field>
+			<field name="ebc_groups_id" eval="ref('grupoA')"/>
+			<field name="denomination">Gestión sostenible de los suministros</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">90</field>
+        </record>
+
+		<record id="indicadorA4" model="ebc.indicators">
+			<field name="name">A4</field>
+			<field name="ebc_groups_id" eval="ref('grupoA')"/>
+			<field name="denomination">Gestión social de los suministros</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">90</field>
+        </record>
+
+		<record id="indicadorA5" model="ebc.indicators">
+			<field name="name">A5</field>
+			<field name="ebc_groups_id" eval="ref('grupoA')"/>
+			<field name="denomination">Gestión transparente de los suministros</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">90</field>
+        </record>
+
+
+        <record id="indicadorB1" model="ebc.indicators">
+			<field name="name">B1</field>
+			<field name="ebc_groups_id" eval="ref('grupoB')"/>
+			<field name="denomination">Gestión ética de las finanzas</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">30</field>
+        </record>
+
+		<record id="indicadorB2" model="ebc.indicators">
+			<field name="name">B2</field>
+			<field name="ebc_groups_id" eval="ref('grupoB')"/>
+			<field name="denomination">Gestión solidaria de las finanzas</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">30</field>
+        </record>
+
+		<record id="indicadorB3" model="ebc.indicators">
+			<field name="name">B3</field>
+			<field name="ebc_groups_id" eval="ref('grupoB')"/>
+			<field name="denomination">Gestión ecológica de las finanzas</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">30</field>
+        </record>
+
+		<record id="indicadorB4" model="ebc.indicators">
+			<field name="name">B4</field>
+			<field name="ebc_groups_id" eval="ref('grupoB')"/>
+			<field name="denomination">Gestión justa de las finanzas</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">30</field>
+        </record>
+
+		<record id="indicadorB5" model="ebc.indicators">
+			<field name="name">B5</field>
+			<field name="ebc_groups_id" eval="ref('grupoB')"/>
+			<field name="denomination">Gestión transparente y democrática de las finanzas</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">30</field>
+        </record>
+
+		<record id="indicadorC1" model="ebc.indicators">
+			<field name="name">C1</field>
+			<field name="ebc_groups_id" eval="ref('grupoC')"/>
+			<field name="denomination">Calidad del puesto de trabajo e igualdad</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">90</field>
+        </record>
+
+		<record id="indicadorC2" model="ebc.indicators">
+			<field name="name">C2</field>
+			<field name="ebc_groups_id" eval="ref('grupoC')"/>
+			<field name="denomination">Reparto justo del volumen de trabajo</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">50</field>
+        </record>
+
+		<record id="indicadorC3" model="ebc.indicators">
+			<field name="name">C3</field>
+			<field name="ebc_groups_id" eval="ref('grupoC')"/>
+			<field name="denomination">Comportamiento ecológico de las personas empleadas</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">30</field>
+        </record>
+
+		<record id="indicadorC4" model="ebc.indicators">
+			<field name="name">C4</field>
+			<field name="ebc_groups_id" eval="ref('grupoC')"/>
+			<field name="denomination">Reparto justo de la renta relacionada con las responsabilidades y acordes a un salario mínimo digno</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">60</field>
+        </record>
+
+		<record id="indicadorC5" model="ebc.indicators">
+			<field name="name">C5</field>
+			<field name="ebc_groups_id" eval="ref('grupoC')"/>
+			<field name="denomination">Flujo democrático y transparente de la información</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">90</field>
+        </record>
+
+		<record id="indicadorD1" model="ebc.indicators">
+			<field name="name">D1</field>
+			<field name="ebc_groups_id" eval="ref('grupoD')"/>
+			<field name="denomination">Servicios básicos que garanticen la calidad de vida a todos los ciudadanos</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">50</field>
+        </record>
+
+		<record id="indicadorD2" model="ebc.indicators">
+			<field name="name">D2</field>
+			<field name="ebc_groups_id" eval="ref('grupoD')"/>
+			<field name="denomination">Infraestructuras y medios para la generación de BC por los agentes sociales</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">70</field>
+        </record>
+
+		<record id="indicadorD3" model="ebc.indicators">
+			<field name="name">D3</field>
+			<field name="ebc_groups_id" eval="ref('grupoD')"/>
+			<field name="denomination">Concepción ecológica en todos los servicios municipales y sostenibilidad de todos los elementos patrimoniales municipales</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">90</field>
+        </record>
+
+		<record id="indicadorD4" model="ebc.indicators">
+			<field name="name">D4</field>
+			<field name="ebc_groups_id" eval="ref('grupoD')"/>
+			<field name="denomination">La fiscalidad municipal tiene que estar distribuida con equidad, para evitar situaciones de necesidad a los ciudadanos</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">30</field>
+        </record>
+
+		<record id="indicadorD5" model="ebc.indicators">
+			<field name="name">D5</field>
+			<field name="ebc_groups_id" eval="ref('grupoD')"/>
+			<field name="denomination">Aumento de los estándares de transparencia municipal y fomentar la participación ciudadana</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">30</field>
+        </record>
+
+		<record id="indicadorE1" model="ebc.indicators">
+			<field name="name">E1</field>
+			<field name="ebc_groups_id" eval="ref('grupoE')"/>
+			<field name="denomination">Efecto social</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">90</field>
+        </record>
+
+		<record id="indicadorE2" model="ebc.indicators">
+			<field name="name">E2</field>
+			<field name="ebc_groups_id" eval="ref('grupoE')"/>
+			<field name="denomination">Creación de redes con otros agentes dentro y fuera del municipio</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">40</field>
+        </record>
+
+		<record id="indicadorE3" model="ebc.indicators">
+			<field name="name">E3</field>
+			<field name="ebc_groups_id" eval="ref('grupoE')"/>
+			<field name="denomination">Fomento del comportamiento ecológico en el municipio</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">70</field>
+        </record>
+
+		<record id="indicadorE4" model="ebc.indicators">
+			<field name="name">E4</field>
+			<field name="ebc_groups_id" eval="ref('grupoE')"/>
+			<field name="denomination">Deuda sostenible para no dejar carga a generaciones futuras</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">60</field>
+        </record>
+
+		<record id="indicadorE5" model="ebc.indicators">
+			<field name="name">E5</field>
+			<field name="ebc_groups_id" eval="ref('grupoE')"/>
+			<field name="denomination">Fomento de los valores democráticos y la participación activa de los ciudadanos en la gestión del municipio</field>
+			<field name="ponderacion">0</field>
+            <field name="valoracion_base">30</field>
+        </record>
+    </data>
+</openerp>
