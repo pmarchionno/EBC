@@ -44,7 +44,7 @@ class ebc_groups(osv.osv):
         for grupo in self.browse(cr, uid, ids, context=context):
             for indicador in grupo.indicador_ids:
                 # vamos acumulando por cada 'Indicador'
-                # que tenga asociado (esto lo buscamos en el nuevo campo "indicador_ids")
+                # que tenga asociado (esto lo buscamos en el campo "indicador_ids")
                 # el campo 'max_valoracion' del indicador
                 res[grupo.id] += indicador.max_valoracion
         return res
@@ -52,16 +52,10 @@ class ebc_groups(osv.osv):
     def puntuacion(self, cr, uid, ids, field_name, arg, context=None):
         records = self.browse(cr, uid, ids)
 
-        # Creamos un diccionario "modelo" para los valores de retorno
-        # a cada 'Grupo' le asignamos 0.0 por defecto
         res = dict(((x, 0.0) for x in ids))
 
-        # Iteramos sobre los distintos 'Grupos'
         for grupo in self.browse(cr, uid, ids, context=context):
             for indicador in grupo.indicador_ids:
-                # vamos acumulando por cada 'Indicador'
-                # que tenga asociado (esto lo buscamos en el nuevo campo "indicador_ids")
-                # el campo 'puntuacion' del indicador
                 res[grupo.id] += indicador.puntuacion
                 _logger.info("Mensaje Informativo o Print Inicio %s", indicador.puntuacion)
         return res
@@ -70,7 +64,7 @@ class ebc_groups(osv.osv):
         res = {}
         for r in self.browse(cr, uid, ids, context=context):
             if (r.max_valoracion != 0 ):
-                res[r.id] = math.ceil(r.puntuacion * 100 / r.max_valoracion ) #Falta mejorar y saber si la empresa es o no unipersonal
+                res[r.id] = math.ceil(r.puntuacion * 100 / r.max_valoracion )
             else:
                 res[r.id] = 0
         return res
@@ -89,9 +83,7 @@ class ebc_groups(osv.osv):
         # a todos aquellos criterios que tengan en el campo 'ebc_indicators_id' relacionado al indicador en cuestion
         # es el opuesto al campo many2one
         'indicador_ids': fields.one2many('ebc.indicators', 'ebc_groups_id','Grupos Asociados'),
-		#'attributes_ebc_id': fields.one2many('attributes.ebc', 'ebc_groups_id','Atributos(G) de Vista'),
     }
-    #_order = "name"
 ebc_groups()
 
 class ebc_indicators(osv.osv):
@@ -102,23 +94,12 @@ class ebc_indicators(osv.osv):
         return res
 
     def puntuacion(self, cr, uid, ids, field_name, arg, context=None):
-        #ebc_indicators.max_valoracion = "SUMATORIA(ebc_criteria.max_valoracion) donde ebc_criteria.ebc_indicators_id = ebc_indicators.id"
         records = self.browse(cr, uid, ids)
-        #_logger.info("Mensaje Informativo o Print Inicio")
-
-        # Creamos un diccionario "modelo" para los valores de retorno
-        # a cada 'Indicador' le asignamos 0.0 por defecto
         res = dict(((x, 0.0) for x in ids))
 
-        # Iteramos sobre los distintos 'indicadores'
         for indicador in self.browse(cr, uid, ids, context=context):
             for criterio in indicador.criterio_ids:
-                # vamos acumulando por cada 'criterio'
-                # que tenga asociado (esto lo buscamos en el nuevo campo "criterio_ids")
-                # el campo 'puntuacion' del criterio
                 res[indicador.id] += criterio.puntuacion
-        #        _logger.debug("Total acumulado para el indicador %s: %.2f", indicador.name, res[indicador.id])
-        #print "RESULTADO: ", res OK OK OK OK OK OK OK
         return res
 
     def cumplimiento(self, cr, uid, ids, field_name, arg, context=None):
@@ -142,13 +123,8 @@ class ebc_indicators(osv.osv):
         'puntuacion': fields.function(puntuacion, type='float', string='Puntuacion'),
         'max_valoracion': fields.function(max_valoracion, type='integer', string='Máxima Valoracion'),
         'valoracion_base': fields.integer('Valoracion Base'),
-        # El campo que sigue nos permite "acceder", dado un indicaor
-        # a todos aquellos criterios que tengan en el campo 'ebc_indicators_id' relacionado al indicador en cuestion
-        # es el opuesto al campo many2one
         'criterio_ids': fields.one2many('ebc.criteria', 'ebc_indicators_id','Criterios Asociados'),
-		#'attributes_ebc_id': fields.one2many('attributes.ebc', 'ebc_indicators_id','Atributos(I) de Vista'),
     }
-	#_order = "name"
 ebc_indicators()
 
 class ebc_criteria(osv.osv):
@@ -157,26 +133,17 @@ class ebc_criteria(osv.osv):
         _logger.debug("Puntuacion de criterio %s", res)
         for r in self.browse(cr, uid, ids, context=context):
             res[r.id] = math.ceil(r.max_valoracion * r.cumplimiento / 100)
-            #_logger.debug("Puntuacion de criterio %s - %s: %.2f", criteria.max_valoracion, criteria.cumplimiento, res[grupo.id])
         return res
 
     def max_valoracion(self, cr, uid, ids, field_name, arg, context=None):
-        #ebc_indicators.max_valoracion = "SUMATORIA(ebc_criteria.max_valoracion) donde ebc_criteria.ebc_indicators_id = ebc_indicators.id"
         records = self.browse(cr, uid, ids)
-        #_logger.info("Mensaje Informativo o Print Inicio")
-
-        # Creamos un diccionario "modelo" para los valores de retorno
-        # a cada 'Indicador' le asignamos 0.0 por defecto
         res = dict(((x, 0.0) for x in ids))
 
-        # Iteramos sobre los distintos 'indicadores'
         for r in self.browse(cr, uid, ids, context=context):
             total = 1
             for criterio in r.ebc_indicators_id:
                 total = criterio.max_valoracion
             res[r.id] = math.ceil(r.ponderacion * total / 100)
-        #        _logger.debug("Total acumulado para el r %s: %.2f", r.name, res[r.id])
-        #print "RESULTADO: ", res
         return res
 
     """Criterios"""
@@ -189,9 +156,7 @@ class ebc_criteria(osv.osv):
         'cumplimiento': fields.integer('Cumplimiento'),
         'puntuacion': fields.function (puntuacion, type = 'float', string = 'Puntuacion'),
         'max_valoracion': fields.function(max_valoracion, type='float', string='Máxima Valoracion'),
-		#'attributes_ebc_id': fields.one2many('attributes.ebc', 'ebc_criteria_id','Atributos(C) de Vista'),
     }
-	#_order = "name"
 ebc_criteria()
 
 class ebc_empresa(osv.osv):
@@ -215,8 +180,6 @@ class ebc_empresa(osv.osv):
         'informacion': fields.char('Revelacion de informaciones',size=256, required=False,  help="Revelacion de informaciones + transmision de tecnologias"),
         'cumplimiento': fields.integer('Puntuacion'),
         'puntuacion': fields.integer('Puntuacion'),
-        #'valoracion': fields.function(max_valoracion, type='float', string='Valoracion'),
-        #'grupos_ids': fields.one2many('ebc.groups', 'ebc_indicators_id','Criterios Asociados'),
     }
 ebc_empresa()
 
@@ -236,23 +199,11 @@ class ebc_repositorio(osv.osv):
     }
 ebc_repositorio()
 
-
-class res_partner(osv.osv):
-    _name = 'res.partner'
-    _inherit = 'res.partner'
-    _columns = {
-        'cumpl_ebc': fields.integer(' Porcentaje Cumplimiento Norma EBC'),
-    }
-    _default = {
-
-    }
-res_partner()
-
 class product_template(osv.osv):
     _name = 'product.template'
     _inherit = 'product.template'
     _columns = {
-        'cumpl_ebc': fields.integer(' Porcentaje Cumplimiento Norma EBC'),
+        'cumpl_ebc': fields.integer('Cumplimiento Norma EBC'),
     }
     _default = {
 
@@ -263,7 +214,7 @@ class res_partner_bank(osv.osv):
     _name = 'res.partner.bank'
     _inherit = 'res.partner.bank'
     _columns = {
-        'cumpl_ebc': fields.integer(' Porcentaje Cumplimiento Norma EBC'),
+        'cumpl_ebc': fields.integer('Cumplimiento Norma EBC'),
     }
     _default = {
 

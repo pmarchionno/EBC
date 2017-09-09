@@ -152,7 +152,17 @@
                 </form>
             </field>
         </record>
-
+<!--
+        <record model="ir.ui.view" id="ebc_res_partner_form_inherited">
+            <field name="name">ebc.res.partner.form.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="cumpl_ebc"/>
+            </field>
+        </record>
+-->
+		
 <!--=======================
         <record id="ebc_parametros_tree" model="ir.ui.view">
             <field name="name">ebc.parametros.tree</field>
@@ -276,7 +286,62 @@
             <field name="type">form</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-                <field name="customer" position="after">
+                <field name="title" position="after">
+                    <field name="cumpl_ebc" />
+                </field>
+            </field>
+        </record>
+		
+		<record id="inherit_product_template_ebc_form" model="ir.ui.view">
+            <field name="name">inherit.product.template.ebc.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <field name="default_code" position="after">
+                    <field name="cumpl_ebc" />
+                </field>
+            </field>
+        </record>
+		
+		<record id="inherit_product_template_ebc_kanban" model="ir.ui.view">
+            <field name="name">inherit.product.template.ebc.kanban</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_kanban_view"/>
+            <field name="arch" type="xml">
+                <field name="default_code" position="after">
+                    <field name="cumpl_ebc" />
+                </field>
+            </field>
+        </record>
+		
+		<record id="inherit_product_template_ebc" model="ir.ui.view">
+            <field name="name">inherit.product.template.ebc</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_kanban_view"/>
+            <field name="arch" type="xml">
+                <field name="default_code" position="after">
+                    <field name="cumpl_ebc" />
+                </field>
+            </field>
+        </record>
+		
+		<record id="inherit_product_product_ebc_normal_form" model="ir.ui.view">
+            <field name="name">inherit.product.product.ebc.normal.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <field name="default_code" position="after">
+                    <field name="cumpl_ebc" />
+                </field>
+            </field>
+        </record>
+		
+		<record id="inherit_product_product_ebc_normal_tree" model="ir.ui.view">
+            <field name="name">inherit.product.product.ebc.normal.tree</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="ean13" position="after">
                     <field name="cumpl_ebc" />
                 </field>
             </field>

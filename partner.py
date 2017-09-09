@@ -18,12 +18,16 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-#    Code by: pmarchionno email: (pmarchionno@gmail.com)
-#
-##############################################################################
 
-import ebc
-import ebc_metric
-import partner
+from openerp.osv import fields, osv
+
+class res_partner(osv.osv):
+    _inherit = 'res.partner'
+    _columns = {
+        'cumpl_ebc': fields.integer('Cumplimiento Norma EBC'),
+    }
+
+
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+
