@@ -221,6 +221,29 @@ class res_partner_bank(osv.osv):
     }
 res_partner_bank()
 
+class purchase_order(osv.osv):
+    def cumpl_ebc(self, cr, uid, ids, field_name, arg, context=None):
+        records = self.browse(cr, uid, ids)
+        res = dict(((x, 0.0) for x in ids))
+
+        for r in self.browse(cr, uid, ids, context=context):
+            total = 1
+            for partner in r.partner_id:
+                total = partner.cumpl_ebc
+            res[r.id] = total
+        return res
+
+    _name = 'purchase.order'
+    _inherit = 'purchase.order'
+
+    _columns = {
+        'cumpl_ebc': fields.function(cumpl_ebc, type='float', string='Cumplimiento Norma EBC'),
+    }
+    _default = {
+
+    }
+purchase_order()
+
 class ebc_cuentas_pagos_proveedores(osv.osv):
     _name = 'ebc.cuentas.interobt.bancos'
 

@@ -32,7 +32,7 @@
             EBC - Administracion.
                         """,
     'website': 'pmarchionno.blogspot.com',
-    'depends' : ['base','account'],
+    'depends' : ['base','account','purchase'],
     'init_xml': [],
     'demo_xml': [],
     'update_xml': [

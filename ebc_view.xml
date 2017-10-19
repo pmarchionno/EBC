@@ -346,6 +346,17 @@
                 </field>
             </field>
         </record>
+		
+		<record id="inherit_purchase_purchase_order_ebc_tree" model="ir.ui.view">
+            <field name="name">inherit.purchase.purchase.order.ebc.tree</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+            <field name="arch" type="xml">
+                <field name="amount_total" position="after">
+                    <field name="cumpl_ebc" />
+                </field>
+            </field>
+        </record>
         <!--====-->
 
 
