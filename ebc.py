@@ -210,6 +210,17 @@ class product_template(osv.osv):
     }
 product_template()
 
+class res_partner(osv.osv):
+    _name = 'res.partner'
+    _inherit = 'res.partner'
+    _columns = {
+        'cumpl_ebc': fields.integer('Cumplimiento Norma EBC'),
+    }
+    _default = {
+
+    }
+res_partner()
+
 class res_partner_bank(osv.osv):
     _name = 'res.partner.bank'
     _inherit = 'res.partner.bank'
@@ -237,7 +248,7 @@ class purchase_order(osv.osv):
     _inherit = 'purchase.order'
 
     _columns = {
-        'cumpl_ebc': fields.function(cumpl_ebc, type='float', string='Cumplimiento Norma EBC'),
+        'cumpl_ebc': fields.function(cumpl_ebc, type='float', string='EBC'),
     }
     _default = {
 
@@ -275,7 +286,7 @@ class account_account(models.Model):
     _name = 'account.account'
     _inherit = 'account.account'
     _columns = {
-        'valoracion_ebc': fields.boolean('Valoración EBC'),
+        'cumpl_ebc': fields.boolean('Valoración EBC'),
     }
 account_account()
 

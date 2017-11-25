@@ -347,6 +347,28 @@
             </field>
         </record>
 		
+		<record id="inherit_view_partner_bank_ebc_tree" model="ir.ui.view">
+            <field name="name">inherit.view.partner.bank.ebc.tree</field>
+            <field name="model">res.partner.bank</field>
+            <field name="inherit_id" ref="base.view_partner_bank_form"/>
+            <field name="arch" type="xml">
+                <field name="bank_bic" position="after">
+                    <field name="cumpl_ebc" />
+                </field>
+            </field>
+        </record>
+		
+		<record id="inherit_account_view_account_ebc_form" model="ir.ui.view">
+            <field name="name">inherit.account.view.account.ebc.form</field>
+            <field name="model">account.account</field>
+            <field name="inherit_id" ref="account.view_account_form"/>
+            <field name="arch" type="xml">
+                <field name="balance" position="after">
+                    <field name="cumpl_ebc" />
+                </field>
+            </field>
+        </record>
+		
 		<record id="inherit_purchase_purchase_order_ebc_tree" model="ir.ui.view">
             <field name="name">inherit.purchase.purchase.order.ebc.tree</field>
             <field name="model">purchase.order</field>
@@ -357,6 +379,19 @@
                 </field>
             </field>
         </record>
+		
+		<record id="inherit_purchase_purchase_order_ebc_form" model="ir.ui.view">
+            <field name="name">inherit.purchase.purchase.order.ebc.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <field name="picking_type_id" position="after">
+                    <field name="cumpl_ebc" />
+                </field>
+            </field>
+        </record>
+		
+		
         <!--====-->
 
 

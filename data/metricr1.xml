@@ -6,7 +6,7 @@
         -->
 
         <record id="metricA1" model="metric">
-			<field name="name">A1. Gestión ética del los suministros</field>
+			<field name="name">MA1</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la gestión ética del los suministros</field>
 			<field name="references"></field>
@@ -20,7 +20,7 @@
         </record>
 		
 		<record id="metricA2" model="metric">
-			<field name="name">A2. Gestión solidaria del los suministros</field>
+			<field name="name">MA2</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la gestión solidaria del los suministros</field>
 			<field name="references"></field>
@@ -34,7 +34,7 @@
         </record>
 		
 		<record id="metricA3" model="metric">
-			<field name="name">A3. Gestión sostenible de los suministros</field>
+			<field name="name">MA3</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la gestión sostenible de los suministros</field>
 			<field name="references"></field>
@@ -48,7 +48,7 @@
         </record>
 		
 		<record id="metricA4" model="metric">
-			<field name="name">A4. Gestión social de los suministros</field>
+			<field name="name">MA4</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la gestión social de los suministros</field>
 			<field name="references"></field>
@@ -62,7 +62,7 @@
         </record>
 		
 		<record id="metricA5" model="metric">
-			<field name="name">A5. Gestión transparente de los suministros</field>
+			<field name="name">MA5</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la gestión transparente de los suministros</field>
 			<field name="references"></field>
@@ -76,7 +76,7 @@
         </record>
 		
 		<record id="metricB1" model="metric">
-			<field name="name">B1. Gestión ética de las finanzas</field>
+			<field name="name">MB1</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la gestión ética de las finanzas</field>
 			<field name="references"></field>
@@ -90,7 +90,7 @@
         </record>
 		
 		<record id="metricB2" model="metric">
-			<field name="name">B2. Gestión solidaria de las finanzas</field>
+			<field name="name">MB2</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la gestión solidaria de las finanzas</field>
 			<field name="references"></field>
@@ -104,7 +104,7 @@
         </record>
 		
 		<record id="metricB3" model="metric">
-			<field name="name">B3. Gestión ecológica de las finanzas</field>
+			<field name="name">MB3</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la gestión ecológica de las finanzas</field>
 			<field name="references"></field>
@@ -118,7 +118,7 @@
         </record>
 		
 		<record id="metricB4" model="metric">
-			<field name="name">B4. Gestión justa de las finanzas</field>
+			<field name="name">MB4</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la gestión justa de las finanzas</field>
 			<field name="references"></field>
@@ -132,7 +132,7 @@
         </record>
 		
 		<record id="metricB5" model="metric">
-			<field name="name">B5. Gestión transparente y democrática de las finanzas</field>
+			<field name="name">MB5</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la gestión transparente y democrática de las finanzas</field>
 			<field name="references"></field>
@@ -146,7 +146,7 @@
         </record>
 		
 		<record id="metricC1" model="metric">
-			<field name="name">C1. Calidad del puesto de trabajo e igualdad</field>
+			<field name="name">MC1</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la calidad del puesto de trabajo e igualdad</field>
 			<field name="references"></field>
@@ -160,7 +160,7 @@
         </record>
 		
 		<record id="metricC2" model="metric">
-			<field name="name">C2. Reparto justo del volumen de trabajo</field>
+			<field name="name">MC2</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación del reparto justo del volumen de trabajo</field>
 			<field name="references"></field>
@@ -174,7 +174,7 @@
         </record>
 		
 		<record id="metricC3" model="metric">
-			<field name="name">C3. Comportamiento ecológico de las personas empleadas</field>
+			<field name="name">MC3</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación del comportamiento ecológico de las personas empleadas</field>
 			<field name="references"></field>
@@ -188,7 +188,7 @@
         </record>
 		
 		<record id="metricC4" model="metric">
-			<field name="name">C4. Reparto justo de la renta relacionada con las responsabilidades y acordes a un salario mínimo digno</field>
+			<field name="name">MC4</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación del reparto justo de la renta relacionada con las responsabilidades y acordes a un salario mínimo digno</field>
 			<field name="references"></field>
@@ -202,7 +202,7 @@
         </record>
 		
 		<record id="metricC5" model="metric">
-			<field name="name">C5. Flujo democrático y transparente de la información</field>
+			<field name="name">MC5</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación del flujo democrático y transparente de la información</field>
 			<field name="references"></field>
@@ -216,7 +216,7 @@
         </record>
 		
 		<record id="metricD1" model="metric">
-			<field name="name">D1. Servicios básicos que garanticen la calidad de vida a todos los ciudadanos</field>
+			<field name="name">MD1</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de los servicios básicos que garanticen la calidad de vida a todos los ciudadanos</field>
 			<field name="references"></field>
@@ -230,7 +230,7 @@
         </record>
 		
 		<record id="metricD2" model="metric">
-			<field name="name">D2. Infraestructuras y medios para la generación de BC por los agentes sociales</field>
+			<field name="name">MD2</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de las infraestructuras y medios para la generación de BC por los agentes sociales</field>
 			<field name="references"></field>
@@ -244,7 +244,7 @@
         </record>
 		
 		<record id="metricD3" model="metric">
-			<field name="name">D3. Concepción ecológica en todos los servicios municipales y sostenibilidad de todos los elementos patrimoniales municipales</field>
+			<field name="name">MD3</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la concepción ecológica en todos los servicios municipales y sostenibilidad de todos los elementos patrimoniales municipales</field>
 			<field name="references"></field>
@@ -258,7 +258,7 @@
         </record>
 		
 		<record id="metricD4" model="metric">
-			<field name="name">D4. La fiscalidad municipal tiene que estar distribuida con equidad, para evitar situaciones de necesidad a los ciudadanos</field>
+			<field name="name">MD4</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la fiscalidad municipal tiene que estar distribuida con equidad, para evitar situaciones de necesidad a los ciudadanos</field>
 			<field name="references"></field>
@@ -272,7 +272,7 @@
         </record>
 		
 		<record id="metricD5" model="metric">
-			<field name="name">D5. Aumento de los estándares de transparencia municipal y fomentar la participación ciudadana</field>
+			<field name="name">MD5</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación del Aumento de los estándares de transparencia municipal y fomentar la participación ciudadana</field>
 			<field name="references"></field>
@@ -286,7 +286,7 @@
         </record>
 		
 		<record id="metricE1" model="metric">
-			<field name="name">E1. Efecto social</field>
+			<field name="name">ME1</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación del efecto social</field>
 			<field name="references"></field>
@@ -300,7 +300,7 @@
         </record>
 		
 		<record id="metricE2" model="metric">
-			<field name="name">E2. Creación de redes con otros agentes dentro y fuera del municipio</field>
+			<field name="name">ME2</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la creación de redes con otros agentes dentro y fuera del municipio</field>
 			<field name="references"></field>
@@ -314,7 +314,7 @@
         </record>
 		
 		<record id="metricE3" model="metric">
-			<field name="name">E3. Fomento del comportamiento ecológico en el municipio</field>
+			<field name="name">ME3</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación del fomento del comportamiento ecológico en el municipio</field>
 			<field name="references"></field>
@@ -328,7 +328,7 @@
         </record>
 		
 		<record id="metricE4" model="metric">
-			<field name="name">E4. Deuda sostenible para no dejar carga a generaciones futuras</field>
+			<field name="name">ME4</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de la deuda sostenible para no dejar carga a generaciones futuras</field>
 			<field name="references"></field>
@@ -342,7 +342,7 @@
         </record>
 		
 		<record id="metricE5" model="metric">
-			<field name="name">E5. Fomento de los valores democráticos y la participación activa de los ciudadanos en la gestión del municipio</field>
+			<field name="name">ME5</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación del fomento de los valores democráticos y la participación activa de los ciudadanos en la gestión del municipio</field>
 			<field name="references"></field>

@@ -6,7 +6,7 @@
         -->
 
         <record id="metricA" model="metric">
-			<field name="name">A. Proveedores</field>
+			<field name="name">MA</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de Proveedores</field>
 			<field name="references"></field>
@@ -21,7 +21,7 @@
 		
 		
 		<record id="metricB" model="metric">
-			<field name="name">B. Financiadores</field>
+			<field name="name">MB</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de Financiadores</field>
 			<field name="references"></field>
@@ -36,7 +36,7 @@
 		
 		
 		<record id="metricC" model="metric">
-			<field name="name">C. Empleados Municipales</field>
+			<field name="name">MC</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de los Empleados Municipales</field>
 			<field name="references"></field>
@@ -50,7 +50,7 @@
         </record>
 		
 		<record id="metricD" model="metric">
-			<field name="name">D. Ciudadaons/Otros Municipios</field>
+			<field name="name">MD</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación de Ciudadaons/Otros Municipios</field>
 			<field name="references"></field>
@@ -64,7 +64,7 @@
         </record>
 		
 		<record id="metricE" model="metric">
-			<field name="name">E. Ambito Social. Fomento de Valores</field>
+			<field name="name">ME</field>
 			<field name="valueInterpretation"></field>
 			<field name="objective">Evaluación del Ambito Social y Fomento de Valores</field>
 			<field name="references"></field>
