@@ -159,29 +159,6 @@ class ebc_criteria(osv.osv):
     }
 ebc_criteria()
 
-class ebc_empresa(osv.osv):
-
-    """Datos"""
-    _name = 'ebc.empresa'
-    _columns = {
-        'razon_social': fields.char('Nombre de la empresa', size=256, required=False, help="Nombre de la empresa"),
-        'direccion': fields.char('Dirección ', size=256, required=False, help="direccion"),
-        'pais': fields.char('Pais', size=256, required=False, help="Pais"),
-        'pais_id': fields.many2one('res.country', 'Pais'),
-        'productos_de_minoristas': fields.char('Productos de minoristas', size=256, required=False, help="Productos de minoristas"),
-        'numero_trabajadores': fields.char('Numero de trabajadores', size=256, required=False, help="Numero de trabajadores"),
-        'tipo_empresa': fields.char('Empresa Unipersonal/Autonoma', size=256, required=False, help="Empresa Unipersonal/Autonoma"),
-        'responsable': fields.char('Responsable', size=256, required=False, help="Responsable"),
-        'email': fields.char('Direccion de correo electronico', size=256, required=False, help="Direccion de correo electronico"),
-        'telefono': fields.char('Numero de Telefono', size=256, required=False, help="Numero de Telefono"),
-        'web': fields.char('Pagina Web', size=256, required=False, help="Pagina Web"),
-        'auditor': fields.char('Auditor', size=256, required=False, help="Auditor"),
-        'reclamaciones': fields.char('Proceso de reclamaciones', size=256, required=False, help="Proceso de reclamaciones + lugar de quejas independiente + medidas positivas de Servicio"),
-        'informacion': fields.char('Revelacion de informaciones',size=256, required=False,  help="Revelacion de informaciones + transmision de tecnologias"),
-        'cumplimiento': fields.integer('Puntuacion'),
-        'puntuacion': fields.integer('Puntuacion'),
-    }
-ebc_empresa()
 
 class ebc_repositorio(osv.osv):
     """Repositorio"""

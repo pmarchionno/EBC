@@ -161,18 +161,18 @@
     	-->
 
     	<menuitem id='metric_menu' name="Metrica EBC" />
-
-    	<menuitem id='submenu_metric' parent="metric_menu" name="Metricas de la EBC" sequence="0"/>
-    	<menuitem id='submenu_metric_action' parent="submenu_metric" name="Metricas" sequence="0" action="metric_action"/>
-
-        <menuitem id='submenu_metric' parent="metric_menu" name="Escalas para la EBC" sequence="0"/>
-        <menuitem id='submenu_scale_action' parent="submenu_metric" name="Escalas" sequence="0" action="scale_action"/>
-
-        <menuitem id='submenu_metric' parent="metric_menu" name="Metodos para la EBC" sequence="0"/>
-        <menuitem id='submenu_method_action' parent="submenu_metric" name="Metodos" sequence="0" action="method_action"/>
-
+        
+		<menuitem id='submenu_ebc_metrics' parent="ebc_matriz_menu" name="Mediciones" sequence="0"/>
+        <menuitem id='submenu_ebc_mbc' parent="submenu_ebc_metrics" name="Metricas" sequence="0" action="metric_action"/>
+		
+		<menuitem id='submenu_metric' parent="metric_menu" name="Escalas para la EBC" sequence="0"/>
+        <menuitem id='submenu_scale_action' parent="submenu_ebc_metrics" name="Escalas" sequence="0" action="scale_action"/>
+		
+		<menuitem id='submenu_metric' parent="metric_menu" name="Metodos para la EBC" sequence="0"/>
+		<menuitem id='submenu_method_action' parent="submenu_ebc_metrics" name="Metodos" sequence="0" action="method_action"/>
+        
         <menuitem id='submenu_metric' parent="metric_menu" name="Mediciones" sequence="0"/>
-        <menuitem id='submenu_measurement_action' parent="submenu_metric" name="Mediciones" sequence="0" action="measurement_action"/>
+        <menuitem id='submenu_measurement_action' parent="submenu_ebc_metrics" name="Mediciones" sequence="0" action="measurement_action"/>
 <!--====
 -->
     </data>

@@ -107,111 +107,7 @@
             </field>
         </record>
 
-        <record id="ebc_empresa_tree" model="ir.ui.view">
-            <field name="name">ebc.empresa.tree</field>
-            <field name="model">ebc.empresa</field>
-            <field name="arch" type="xml">
-                <tree string="Datos de la Epresa">
-                    <field name="razon_social"/>
-                    <field name="direccion"/>
-                    <field name="pais_id"/>
-                    <field name="productos_de_minoristas"/>
-                    <field name="numero_trabajadores"/>
-                    <field name="tipo_empresa"/>
-                    <field name="responsable"/>
-                    <field name="email"/>
-                    <field name="telefono"/>
-                    <field name="web"/>
-                    <field name="auditor"/>
-                    <field name="reclamaciones"/>
-                    <field name="informacion"/>
-                </tree>
-            </field>
-        </record>
-
-        <record id="ebc_empresa_form" model="ir.ui.view">
-            <field name="name">ebc.empresa.form</field>
-            <field name="model">ebc.empresa</field>
-            <field name="arch" type="xml">
-                <form string="Datos de la Empresa" version="1.0">
-                    <group colspan="2">
-                        <field name="razon_social"/>
-                        <field name="direccion"/>
-                        <field name="pais_id"/>
-                        <field name="productos_de_minoristas"/>
-                        <field name="numero_trabajadores"/>
-                        <field name="tipo_empresa"/>
-                        <field name="responsable"/>
-                        <field name="email"/>
-                        <field name="telefono"/>
-                        <field name="web"/>
-                        <field name="auditor"/>
-                        <field name="reclamaciones"/>
-                        <field name="informacion"/>
-                    </group>
-                </form>
-            </field>
-        </record>
-<!--
-        <record model="ir.ui.view" id="ebc_res_partner_form_inherited">
-            <field name="name">ebc.res.partner.form.inherited</field>
-            <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.res_partner_form"/>
-            <field name="arch" type="xml">
-                <field name="cumpl_ebc"/>
-            </field>
-        </record>
--->
-		
-<!--=======================
-        <record id="ebc_parametros_tree" model="ir.ui.view">
-            <field name="name">ebc.parametros.tree</field>
-            <field name="model">ebc.parametros</field>
-            <field name="arch" type="xml">
-                <tree string="Parametros EBC">
-                    <field name="movilidad"/>
-                    <field name="cultura"/>
-                    <field name="huellaEcologica"/>
-                    <field name="institucionalizacion"/>
-                    <field name="markEtico"/>
-                    <field name="formacion"/>
-                    <field name="bonificaciones"/>
-                    <field name="alcance"/>
-                    <field name="transparencia"/>
-                    <field name="cooperacion"/>
-                    <field name="reclamaciones"/>
-                    <field name="revelacion"/>
-                    <field name="prestamo"/>
-                    <field name="markCoop"/>
-                </tree>
-            </field>
-        </record>
-
-        <record id="ebc_parametros_form" model="ir.ui.view">
-            <field name="name">ebc.parametros.form</field>
-            <field name="model">ebc.parametros</field>
-            <field name="arch" type="xml">
-                <form string="Parametros de la EBC" version="1.0">
-                    <group colspan="2">
-                        <field name="movilidad"/>
-                        <field name="cultura"/>
-                        <field name="huellaEcologica"/>
-                        <field name="institucionalizacion"/>
-                        <field name="markEtico"/>
-                        <field name="formacion"/>
-                        <field name="bonificaciones"/>
-                        <field name="alcance"/>
-                        <field name="transparencia"/>
-                        <field name="cooperacion"/>
-                        <field name="reclamaciones"/>
-                        <field name="revelacion"/>
-                        <field name="prestamo"/>
-                        <field name="markCoop"/>
-                    </group>
-                </form>
-            </field>
-        </record>
-====-->
+       
 
     	<record id="ebc_groups_action" model="ir.actions.act_window">
     		<field name="name">Economia del Bien Comun - Grupos</field>
@@ -234,21 +130,6 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <record id="ebc_empresa_action" model="ir.actions.act_window">
-            <field name="name">Economia del Bien Comun - Datos de la Empresa</field>
-            <field name="res_model">ebc.empresa</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-<!--====
-        <record id="ebc_parametros_action" model="ir.actions.act_window">
-            <field name="name">Economia del Bien Comun - Parametros</field>
-            <field name="res_model">ebc.parametros</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-        </record>
--->
-
 
     	<!--====
 		================MENU==================
@@ -266,17 +147,9 @@
         <menuitem id='submenu_ebc_criteria_action' parent="submenu_ebc_matriz" name="Criteria" sequence="0" action="ebc_criteria_action"/>
 
 
-        <menuitem id='submenu_ebc_parametros' parent="ebc_matriz_menu" name="Parametros" sequence="0"/>
-        <menuitem id='submenu_ebc_empresa_action' parent="submenu_ebc_parametros" name="Datos de la Empresa" sequence="0" action="ebc_empresa_action"/>
-<!--====
-        <menuitem id='submenu_ebc_parametros' parent="ebc_matriz_menu" name="Parametros" sequence="0"/>
-        <menuitem id='submenu_ebc_parametros_action' parent="submenu_ebc_parametros" name="Parametros" sequence="10" action="ebc_parametros_action"/>
--->
-		<menuitem id='submenu_ebc_parametros' parent="ebc_matriz_menu" name="Parametros" sequence="0"/>
-        <menuitem id='submenu_ebc_matriz_action' parent="submenu_ebc_parametros" name="Matriz del Bien Común" sequence="10" action="ebc_empresa_action"/>
 
 		<menuitem id='submenu_ebc_informes' parent="ebc_matriz_menu" name="Informes" sequence="0"/>
-        <menuitem id='submenu_ebc_bbc' parent="submenu_ebc_informes" name="Balance del Bien Común" sequence="10" action="ebc_empresa_action"/>
+        <menuitem id='submenu_ebc_bbc' parent="submenu_ebc_informes" name="Matriz del Bien Común" sequence="10" action="ebc_groups_action"/>
 
 
         <!--======================= HERENCIA =======================-->
