@@ -23,6 +23,7 @@ from openerp import models
 from openerp.osv import fields, osv, orm
 from datetime import time, datetime
 from openerp.tools.translate import _
+from openerp.addons.edi import EDIMixin
 import math
 
 #Importamos la libreria logger
@@ -166,13 +167,11 @@ class ebc_repositorio(osv.osv):
 
     _columns = {
         'account_id': fields.many2one('account.account', 'Cuenta Contable', required=True),
-        'amount_tax': fields.float('Impuestos'),
+		'amount': fields.float('Importe'),
+        'amount_total': fields.float('Total Comprobante'),
+        'partner_id': fields.many2one('res.partner', 'Entidad Comercial'),
         'date_invoice': fields.date('Fecha de Comprobante'),
-        'amount_total': fields.float('Total'),
-        'commercial_partner_id': fields.many2one('res.partner', 'Entidad Comercial'),
         'date_due': fields.date('Fecha de Vencimiento'),
-        'partner_id': fields.many2one('res.partner', 'Cliente / Proveedor'),
-        'amount_untaxed': fields.float('Subtotal'),
     }
 ebc_repositorio()
 
@@ -198,7 +197,18 @@ class res_partner(osv.osv):
     }
 res_partner()
 
-class res_partner_bank(osv.osv):
+#class res_partner_bank(osv.osv):
+#    _name = 'res.partner.bank'
+#    _inherit = 'res.partner.bank'
+#    _columns = {
+#        'cumpl_ebc': fields.integer('Cumplimiento Norma EBC'),
+#    }
+#    _default = {
+#
+#    }
+#res_partner_bank()
+
+class bank(osv.osv):
     _name = 'res.partner.bank'
     _inherit = 'res.partner.bank'
     _columns = {
@@ -207,7 +217,7 @@ class res_partner_bank(osv.osv):
     _default = {
 
     }
-res_partner_bank()
+bank()
 
 class purchase_order(osv.osv):
     def cumpl_ebc(self, cr, uid, ids, field_name, arg, context=None):
@@ -233,7 +243,7 @@ class purchase_order(osv.osv):
 purchase_order()
 
 class ebc_cuentas_pagos_proveedores(osv.osv):
-    _name = 'ebc.cuentas.interobt.bancos'
+    _name = 'ebc.cuentas.pagos.proveedores'
 
     _columns = {
         'account_id': fields.many2one('account.account', 'Cuenta Contable', required=True),
@@ -264,6 +274,25 @@ class account_account(models.Model):
     _inherit = 'account.account'
     _columns = {
         'cumpl_ebc': fields.boolean('Valoración EBC'),
+    }
+account_account()
+
+class account_invoice(osv.osv, EDIMixin):
+    def cumpl_ebc(self, cr, uid, ids, field_name, arg, context=None):
+        records = self.browse(cr, uid, ids)
+        res = dict(((x, 0.0) for x in ids))
+
+        for r in self.browse(cr, uid, ids, context=context):
+            total = 1
+            for partner in r.partner_id:
+                total = partner.cumpl_ebc
+            res[r.id] = total
+        return res
+
+    _name = 'account.invoice'
+    _inherit = 'account.invoice'
+    _columns = {
+        'cumpl_ebc': fields.function(cumpl_ebc, type='float', string='EBC'),
     }
 account_account()
 

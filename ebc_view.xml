@@ -72,7 +72,7 @@
             </field>
         </record>
 
-
+		
         <record id="ebc_criteria_tree" model="ir.ui.view">
             <field name="name">ebc.criteria.tree</field>
             <field name="model">ebc.criteria</field>
@@ -106,8 +106,6 @@
                 </form>
             </field>
         </record>
-
-       
 
     	<record id="ebc_groups_action" model="ir.actions.act_window">
     		<field name="name">Economia del Bien Comun - Grupos</field>
@@ -144,7 +142,7 @@
         <menuitem id='submenu_ebc_indicators_action' parent="submenu_ebc_matriz" name="Indicators" sequence="0" action="ebc_indicators_action"/>
 
         <menuitem id='submenu_ebc_matriz' parent="ebc_matriz_menu" name="Matriz del Bien Común" sequence="0"/>
-        <menuitem id='submenu_ebc_criteria_action' parent="submenu_ebc_matriz" name="Criteria" sequence="0" action="ebc_criteria_action"/>
+        <menuitem id='submenu_ebc_criteria_action' parent="submenu_ebc_matriz" name="Criterios" sequence="0" action="ebc_criteria_action"/>
 
 
 
@@ -264,59 +262,15 @@
             </field>
         </record>
 		
-		
-        <!--====-->
-
-
-
-
-
-
-
-
-
-
-        <!--====INFORMES
-        <menuitem id='submenu_ebc_matriz' parent="ebc_matriz_menu" name="Informes" sequence="0"/>
-        <menuitem id='submenu_ebc_reporte' parent="submenu_ebc_matriz" name="Matriz del Bien Comun" sequence="0" action="report_ebc_action"/>
-
-
-
-        <record id="view_report_ebc_form" model="ir.ui.view">
-            <field name="name">view.report.ebc.form</field>
-            <field name="model">ebc.report</field>
+		<record id="inherit_account_invoice_ebc_form" model="ir.ui.view">
+            <field name="name">inherit.account.invoice.ebc.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
             <field name="arch" type="xml">
-                <form string="Matriz del Bien Comun " version="1.0">
-                    <group col="4">
-                        <field name="denomination_group"/>
-                        <field name="denomination_indicator"/>
-                        <field name="denomination_criteria"/>
-                        <field name="value_criteria"/>
-                    </group>
-                </form>
+                <field name="fiscal_position" position="after">
+                    <field name="cumpl_ebc" />
+                </field>
             </field>
         </record>
-
-        <record id="view_report_ebc_tree" model="ir.ui.view">
-            <field name="name">Sales by user</field>
-            <field name="model">ebc.report</field>
-            <field name="arch" type="xml">
-                <tree string="POS">
-                    <field name="denomination_group"/>
-                    <field name="denomination_indicator"/>
-                    <field name="denomination_criteria"/>
-                    <field name="value_criteria"/>
-                </tree>
-            </field>
-        </record>
-
-
-        <record id="report_ebc_action" model="ir.actions.act_window">
-            <field name="name">Sales by day</field>
-            <field name="res_model">ebc.report</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-====-->
     </data>
 </openerp>
